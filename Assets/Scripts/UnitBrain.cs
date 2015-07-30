@@ -19,7 +19,7 @@ public class UnitBrain : MonoBehaviour {
 	public Sprite mySprite ;
 	public AbilityDelegate createAbility ;
 	public AbilityDelegate passiveAbility ;
-	public AbilityDelegate collisionAbility ;
+	public CollisionDelegate collisionAbility ;
 	public int row ;
 	public Rigidbody2D rbd ;
 	

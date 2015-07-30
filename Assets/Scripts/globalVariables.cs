@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 public delegate void AbilityDelegate (GameObject me) ;
+public delegate void CollisionDelegate (GameObject me, GameObject other) ;
 public class globalVariables : MonoBehaviour {
 
 	public float rowHeight = 0.6f ;
@@ -74,7 +75,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray[0].GetComponent<Race>().unitSprite = new Sprite[unitAmount] ;
 		raceArray[0].GetComponent<Race>().passiveAbility = new AbilityDelegate[unitAmount] ;
 		raceArray[0].GetComponent<Race>().createAbility = new AbilityDelegate[unitAmount] ;
-		raceArray[0].GetComponent<Race>().collisionAbility = new AbilityDelegate[unitAmount] ;
+		raceArray[0].GetComponent<Race>().collisionAbility = new CollisionDelegate[unitAmount] ;
 		
 		raceArray [0].GetComponent<Race>().raceName = "Chronowarpers";
 		raceArray [0].transform.name = "Chronowarpers";
@@ -90,10 +91,10 @@ public class globalVariables : MonoBehaviour {
 
 
 
-		raceArray[0].GetComponent<Race>().passiveAbility[0] = delegate(GameObject me) {defaultPassiveAbility(me); me.GetComponent<UnitBrain>().currentHealth-=0.2f ;}; raceArray [0].GetComponent<Race>().createAbility[0] =  delegate(GameObject me) {} ; raceArray [0].GetComponent<Race>().collisionAbility[0] = delegate(GameObject me) {} ;
-		raceArray[0].GetComponent<Race>().passiveAbility[1] = defaultPassiveAbility ; raceArray [0].GetComponent<Race>().createAbility[1] =  delegate(GameObject me) {} ; raceArray [0].GetComponent<Race>().collisionAbility[1] = delegate(GameObject me) {} ;
-		raceArray[0].GetComponent<Race>().passiveAbility[2] = defaultPassiveAbility ; raceArray [0].GetComponent<Race>().createAbility[2] =  delegate(GameObject me) {} ; raceArray [0].GetComponent<Race>().collisionAbility[2] = delegate(GameObject me) {} ;
-		raceArray[0].GetComponent<Race>().passiveAbility[3] = defaultPassiveAbility ; raceArray [0].GetComponent<Race>().createAbility[3] =  delegate(GameObject me) {} ; raceArray [0].GetComponent<Race>().collisionAbility[3] = delegate(GameObject me) {} ;
+		raceArray[0].GetComponent<Race>().passiveAbility[0] = delegate(GameObject me) {defaultPassiveAbility(me); me.GetComponent<UnitBrain>().currentHealth-=0.2f ;}; raceArray [0].GetComponent<Race>().createAbility[0] =  delegate(GameObject me) {} ; raceArray [0].GetComponent<Race>().collisionAbility[0] = delegate(GameObject me, GameObject other) {} ;
+		raceArray[0].GetComponent<Race>().passiveAbility[1] = defaultPassiveAbility ; raceArray [0].GetComponent<Race>().createAbility[1] =  delegate(GameObject me) {} ; raceArray [0].GetComponent<Race>().collisionAbility[1] = delegate(GameObject me, GameObject other) {} ;
+		raceArray[0].GetComponent<Race>().passiveAbility[2] = defaultPassiveAbility ; raceArray [0].GetComponent<Race>().createAbility[2] =  delegate(GameObject me) {} ; raceArray [0].GetComponent<Race>().collisionAbility[2] = delegate(GameObject me, GameObject other) {} ;
+		raceArray[0].GetComponent<Race>().passiveAbility[3] = defaultPassiveAbility ; raceArray [0].GetComponent<Race>().createAbility[3] =  delegate(GameObject me) {} ; raceArray [0].GetComponent<Race>().collisionAbility[3] = delegate(GameObject me, GameObject other) {} ;
 
 		raceArray [0].GetComponent<Race>().createAbility[4] = delegate(GameObject me) {
 			me.GetComponent<UnitBrain>().abilityNumbers[0] = 0.2f ;
@@ -111,7 +112,7 @@ public class globalVariables : MonoBehaviour {
 			}
 
 		};
-		raceArray [0].GetComponent<Race>().collisionAbility[4] = delegate(GameObject me) {} ;
+		raceArray [0].GetComponent<Race>().collisionAbility[4] = delegate(GameObject me, GameObject other) {} ;
 
 
 
@@ -131,7 +132,7 @@ public class globalVariables : MonoBehaviour {
 			}
 			
 		};
-		raceArray [0].GetComponent<Race>().collisionAbility[5] = delegate(GameObject me) {} ;
+		raceArray [0].GetComponent<Race>().collisionAbility[5] = delegate(GameObject me, GameObject other) {} ;
 
 
 
@@ -142,17 +143,26 @@ public class globalVariables : MonoBehaviour {
 			defaultPassiveAbility(me) ;
 			me.GetComponent<UnitBrain>().currentHealth+=me.GetComponent<UnitBrain>().abilityNumbers[0] ;
 		};
-		raceArray [0].GetComponent<Race>().collisionAbility[6] = delegate(GameObject me) {};
+		raceArray [0].GetComponent<Race>().collisionAbility[6] = delegate(GameObject me, GameObject other) {};
 
 
 
-		raceArray [0].GetComponent<Race>().createAbility[7] = delegate(GameObject me) {
-			//me.GetComponent<UnitBrain>().abilityNumbers[0] = me.GetComponent<UnitBrain>.creator ;
-		};
-		raceArray[0].GetComponent<Race>().passiveAbility[7] = defaultPassiveAbility ; raceArray [0].GetComponent<Race>().collisionAbility[7] = delegate(GameObject me) {} ;
+		raceArray [0].GetComponent<Race> ().createAbility [7] = delegate(GameObject me) {};
+		raceArray[0].GetComponent<Race>().passiveAbility[7] = defaultPassiveAbility ; 
+		raceArray [0].GetComponent<Race>().collisionAbility[7] = delegate(GameObject me, GameObject other) {
+			if((other.GetComponent<colliderBrain>().type == 0)) {
+				if (other.GetComponent<UnitBrain>().team == me.GetComponent<UnitBrain>().team) {
+					if (me.GetComponent<UnitBrain>().axis%2==0) {
+						other.transform.position = new Vector3 (me.transform.position.x-(0.3f*other.GetComponent<UnitBrain>().moveDirection),other.transform.position.y,other.transform.position.z) ;
+					} else {
+						other.transform.position = new Vector3 (other.transform.position.x,me.transform.position.y-(0.3f*other.GetComponent<UnitBrain>().moveDirection),other.transform.position.z) ;
+					}
+				}
+			}
+		} ;
 
 
-		raceArray[0].GetComponent<Race>().passiveAbility[8] = defaultPassiveAbility ; raceArray [0].GetComponent<Race>().createAbility[8] =  delegate(GameObject me) {} ; raceArray [0].GetComponent<Race>().collisionAbility[8] = delegate(GameObject me) {} ;
+		raceArray[0].GetComponent<Race>().passiveAbility[8] = defaultPassiveAbility ; raceArray [0].GetComponent<Race>().createAbility[8] =  delegate(GameObject me) {} ; raceArray [0].GetComponent<Race>().collisionAbility[8] = delegate(GameObject me, GameObject other) {} ;
 
 
 
@@ -172,7 +182,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray[1].GetComponent<Race>().unitSprite = new Sprite[unitAmount] ;
 		raceArray[1].GetComponent<Race>().passiveAbility = new AbilityDelegate[unitAmount] ;
 		raceArray[1].GetComponent<Race>().createAbility = new AbilityDelegate[unitAmount] ;
-		raceArray[1].GetComponent<Race>().collisionAbility = new AbilityDelegate[unitAmount] ;
+		raceArray[1].GetComponent<Race>().collisionAbility = new CollisionDelegate[unitAmount] ;
 		
 		raceArray [1].GetComponent<Race>().raceName = "Nedrex";
 		raceArray [1].transform.name = "Nedrecks";
@@ -183,7 +193,7 @@ public class globalVariables : MonoBehaviour {
 
 
 
-		raceArray[1].GetComponent<Race>().passiveAbility[0] = defaultPassiveAbility ; raceArray [1].GetComponent<Race>().createAbility[0] =  delegate(GameObject me) {} ; raceArray [1].GetComponent<Race>().collisionAbility[0] = delegate(GameObject me) {} ;
+		raceArray[1].GetComponent<Race>().passiveAbility[0] = defaultPassiveAbility ; raceArray [1].GetComponent<Race>().createAbility[0] =  delegate(GameObject me) {} ; raceArray [1].GetComponent<Race>().collisionAbility[0] = delegate(GameObject me, GameObject other) {} ;
 		raceArray[1].GetComponent<Race>().passiveAbility[1] = delegate(GameObject me) {
 			defaultPassiveAbility(me) ;
 			if (Random.value<0.012&&me.GetComponent<UnitBrain>().abilityNumbers[0]==0f) {
@@ -197,7 +207,7 @@ public class globalVariables : MonoBehaviour {
 		};
 
 
-		raceArray [1].GetComponent<Race>().createAbility[1] = delegate(GameObject me) {me.GetComponent<UnitBrain>().abilityNumbers[0] = 0f ;}; raceArray [1].GetComponent<Race>().collisionAbility[1] = delegate(GameObject me) {} ;
+		raceArray [1].GetComponent<Race>().createAbility[1] = delegate(GameObject me) {me.GetComponent<UnitBrain>().abilityNumbers[0] = 0f ;}; raceArray [1].GetComponent<Race>().collisionAbility[1] = delegate(GameObject me, GameObject other) {} ;
 		raceArray[1].GetComponent<Race>().passiveAbility[2] = delegate(GameObject me) {
 			defaultPassiveAbility(me);
 			if (me.GetComponent<UnitBrain>().enemy!=null) {
@@ -205,7 +215,7 @@ public class globalVariables : MonoBehaviour {
 				Destroy (me) ;
 			}
 		}; 
-		raceArray [1].GetComponent<Race>().createAbility[2] =  delegate(GameObject me) {} ; raceArray [1].GetComponent<Race>().collisionAbility[2] = delegate(GameObject me) {} ;
+		raceArray [1].GetComponent<Race>().createAbility[2] =  delegate(GameObject me) {} ; raceArray [1].GetComponent<Race>().collisionAbility[2] = delegate(GameObject me, GameObject other) {} ;
 
 
 
