@@ -251,7 +251,7 @@ public class globalVariables : MonoBehaviour {
 				Destroy (me);
 			}
 		}; 
-		raceArray [1].GetComponent<Race>().createAbility[3] =  delegate(GameObject me) {} ; raceArray [1].GetComponent<Race>().collisionAbility[3] = delegate(GameObject me) {} ;
+		raceArray [1].GetComponent<Race>().createAbility[3] =  delegate(GameObject me) {} ; raceArray [1].GetComponent<Race>().collisionAbility[3] = delegate(GameObject me, GameObject other) {} ;
 
 	}
 	//int fps = Mathf.RoundToInt(1.0f/Time.deltaTime) ;
