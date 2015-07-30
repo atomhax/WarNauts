@@ -7,7 +7,6 @@ public class rangeBrain : MonoBehaviour {
 		if((other.gameObject.GetComponent<colliderBrain>().type == 0)) {
 			if (other.gameObject.GetComponent<UnitBrain>().team != gameObject.GetComponentInParent<UnitBrain>().team) {
 				transform.parent.GetComponent<UnitBrain>().enemy = null ;
-				transform.parent.GetComponent<UnitBrain>().collisionAbility(gameObject) ;
 			}
 		}
 	}
@@ -21,4 +20,7 @@ public class rangeBrain : MonoBehaviour {
 		}
 	}
 
+	void OnTriggerEnter2D(Collider2D other) { 
+		transform.parent.GetComponent<UnitBrain>().collisionAbility(transform.parent.gameObject, other.gameObject);
+	}
 }
