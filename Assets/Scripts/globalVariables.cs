@@ -44,7 +44,7 @@ public class globalVariables : MonoBehaviour {
 				if (me.GetComponent<UnitBrain> ().atkCooldown <= 0) {
 					me.GetComponent<UnitBrain> ().atkCooldown = me.GetComponent<UnitBrain> ().atkDelay;
 					me.GetComponent<UnitBrain> ().enemy.GetComponent<UnitBrain> ().currentHealth -= me.GetComponent<UnitBrain> ().damage - me.GetComponent<UnitBrain> ().enemy.GetComponent<UnitBrain> ().armor;
-					if (me.GetComponent<UnitBrain> ().enemy.GetComponent<UnitBrain> ().currentHealth == 0) {
+					if (me.GetComponent<UnitBrain> ().enemy.GetComponent<UnitBrain> ().currentHealth <= 0) {
 						me.GetComponent<UnitBrain> ().enemy = null;
 					}
 				}
@@ -158,7 +158,7 @@ public class globalVariables : MonoBehaviour {
 
 
 
-		unitAmount = 3;
+		unitAmount = 4;
 		raceArray [1].GetComponent<Race>().unitAmount = unitAmount ;
 		
 		raceArray[1].GetComponent<Race>().unitName = new string[unitAmount] ;
@@ -176,9 +176,10 @@ public class globalVariables : MonoBehaviour {
 		
 		raceArray [1].GetComponent<Race>().raceName = "Nedrex";
 		raceArray [1].transform.name = "Nedrecks";
-		raceArray[0].GetComponent<Race>().unitName[0] = "Buzzgrunt" ;		 raceArray [1].GetComponent<Race>().unitSpeed [0] = 1.1f; 	raceArray [1].GetComponent<Race>().unitAtkDelay [0] = 50f;	raceArray [1].GetComponent<Race>().unitAtkDamage [0] = 2.5f;		raceArray [1].GetComponent<Race>().unitMaxHealth [0] = 150f;		raceArray [1].GetComponent<Race>().unitArmor [0] = 0f;	raceArray [1].GetComponent<Race>().unitSprite [0] = Resources.Load<Sprite> ("unit10");	raceArray [1].GetComponent<Race>().unitCooldown [0] = 2.6f;	raceArray [1].GetComponent<Race>().unitRange [0] = 0.15f;		 
-		raceArray[1].GetComponent<Race>().unitName[1] = "Buzzdodger" ;		 raceArray [1].GetComponent<Race>().unitSpeed [1] = 1.0f; 	raceArray [1].GetComponent<Race>().unitAtkDelay [1] = 80f;	raceArray [1].GetComponent<Race>().unitAtkDamage [1] = 3.2f;		raceArray [1].GetComponent<Race>().unitMaxHealth [1] = 120f;		raceArray [1].GetComponent<Race>().unitArmor [1] = 0f;	raceArray [1].GetComponent<Race>().unitSprite [1] = Resources.Load<Sprite> ("unit11");	raceArray [1].GetComponent<Race>().unitCooldown [1] = 3.0f;	raceArray [1].GetComponent<Race>().unitRange [1] = 0.15f;		 
-		raceArray[1].GetComponent<Race>().unitName[2] = "Boomstick" ;		 raceArray [1].GetComponent<Race>().unitSpeed [2] = 3.0f; 	raceArray [1].GetComponent<Race>().unitAtkDelay [2] = 1000f;raceArray [1].GetComponent<Race>().unitAtkDamage [2] = 0f;			raceArray [1].GetComponent<Race>().unitMaxHealth [2] = 40f;			raceArray [1].GetComponent<Race>().unitArmor [2] = 2f;	raceArray [1].GetComponent<Race>().unitSprite [2] = Resources.Load<Sprite> ("unit12");	raceArray [1].GetComponent<Race>().unitCooldown [2] = 1.0f;	raceArray [1].GetComponent<Race>().unitRange [2] = 0.05f;		 
+		raceArray[0].GetComponent<Race>().unitName[0] = "Buzzgrunt" ;		 raceArray [1].GetComponent<Race>().unitSpeed [0] = 1.1f; 	raceArray [1].GetComponent<Race>().unitAtkDelay [0] = 50f;	 raceArray [1].GetComponent<Race>().unitAtkDamage [0] = 2.5f;		raceArray [1].GetComponent<Race>().unitMaxHealth [0] = 150f;		raceArray [1].GetComponent<Race>().unitArmor [0] = 0f;	raceArray [1].GetComponent<Race>().unitSprite [0] = Resources.Load<Sprite> ("unit10");	raceArray [1].GetComponent<Race>().unitCooldown [0] = 2.6f;	raceArray [1].GetComponent<Race>().unitRange [0] = 0.15f;		 
+		raceArray[1].GetComponent<Race>().unitName[1] = "Buzzdodger" ;		 raceArray [1].GetComponent<Race>().unitSpeed [1] = 1.0f; 	raceArray [1].GetComponent<Race>().unitAtkDelay [1] = 80f;	 raceArray [1].GetComponent<Race>().unitAtkDamage [1] = 3.2f;		raceArray [1].GetComponent<Race>().unitMaxHealth [1] = 120f;		raceArray [1].GetComponent<Race>().unitArmor [1] = 0f;	raceArray [1].GetComponent<Race>().unitSprite [1] = Resources.Load<Sprite> ("unit11");	raceArray [1].GetComponent<Race>().unitCooldown [1] = 3.0f;	raceArray [1].GetComponent<Race>().unitRange [1] = 0.15f;		 
+		raceArray[1].GetComponent<Race>().unitName[2] = "Boomstick" ;		 raceArray [1].GetComponent<Race>().unitSpeed [2] = 2.5f; 	raceArray [1].GetComponent<Race>().unitAtkDelay [2] = 1000f; raceArray [1].GetComponent<Race>().unitAtkDamage [2] = 0f;			raceArray [1].GetComponent<Race>().unitMaxHealth [2] = 40f;			raceArray [1].GetComponent<Race>().unitArmor [2] = 2f;	raceArray [1].GetComponent<Race>().unitSprite [2] = Resources.Load<Sprite> ("unit12");	raceArray [1].GetComponent<Race>().unitCooldown [2] = 2.2f;	raceArray [1].GetComponent<Race>().unitRange [2] = 0.05f;		 
+		raceArray[1].GetComponent<Race>().unitName[3] = "Junker" ;		 	 raceArray [1].GetComponent<Race>().unitSpeed [3] = 0.7f; 	raceArray [1].GetComponent<Race>().unitAtkDelay [3] = 500f; raceArray [1].GetComponent<Race>().unitAtkDamage [3] = 12f;			raceArray [1].GetComponent<Race>().unitMaxHealth [3] = 130f;		raceArray [1].GetComponent<Race>().unitArmor [3] = 0f;	raceArray [1].GetComponent<Race>().unitSprite [3] = Resources.Load<Sprite> ("unit13");	raceArray [1].GetComponent<Race>().unitCooldown [3] = 3.0f;	raceArray [1].GetComponent<Race>().unitRange [3] = 0.4f;		 
 
 
 
@@ -205,6 +206,42 @@ public class globalVariables : MonoBehaviour {
 			}
 		}; 
 		raceArray [1].GetComponent<Race>().createAbility[2] =  delegate(GameObject me) {} ; raceArray [1].GetComponent<Race>().collisionAbility[2] = delegate(GameObject me) {} ;
+
+
+
+		raceArray[1].GetComponent<Race>().passiveAbility[3] = delegate(GameObject me) {
+			if (me.GetComponent<UnitBrain> ().axis % 2 == 0) {
+				me.GetComponent<UnitBrain> ().rbd.MovePosition (new Vector2 (me.GetComponent<UnitBrain> ().rbd.position.x + (me.GetComponent<UnitBrain> ().hspeed * Time.fixedDeltaTime * me.GetComponent<UnitBrain> ().moveDirection), me.GetComponent<UnitBrain> ().rbd.position.y));
+			} else {
+				me.GetComponent<UnitBrain> ().rbd.MovePosition (new Vector2 (me.GetComponent<UnitBrain> ().rbd.position.x, me.GetComponent<UnitBrain> ().rbd.position.y + (me.GetComponent<UnitBrain> ().hspeed * Time.fixedDeltaTime * me.GetComponent<UnitBrain> ().moveDirection)));		
+			}
+			me.GetComponent<UnitBrain> ().atkCooldown -= 1000 * Time.deltaTime;
+			if (me.GetComponent<UnitBrain> ().enemy != null) {
+				me.GetComponent<UnitBrain> ().hspeed = 0f;
+				if (me.GetComponent<UnitBrain> ().atkCooldown <= 0) {
+					me.GetComponent<UnitBrain> ().atkCooldown = me.GetComponent<UnitBrain> ().atkDelay;
+					me.GetComponent<UnitBrain> ().enemy.GetComponent<UnitBrain> ().currentHealth -= me.GetComponent<UnitBrain> ().damage - me.GetComponent<UnitBrain> ().enemy.GetComponent<UnitBrain> ().armor;
+					if (me.GetComponent<UnitBrain> ().enemy.GetComponent<UnitBrain> ().currentHealth <= 0) {
+						me.GetComponent<UnitBrain> ().enemy = null;
+						GameObject newUnit = Instantiate(me) ;
+						newUnit.GetComponent<UnitBrain>().speed = (Random.value+0.5f)*newUnit.GetComponent<UnitBrain>().speed ;
+						newUnit.GetComponent<UnitBrain>().createAbility = me.GetComponent<UnitBrain>().createAbility ;
+						newUnit.GetComponent<UnitBrain>().collisionAbility = me.GetComponent<UnitBrain>().collisionAbility ;
+						newUnit.GetComponent<UnitBrain>().passiveAbility = me.GetComponent<UnitBrain>().passiveAbility ;
+					}
+				}
+				
+			} else {
+				me.GetComponent<UnitBrain> ().hspeed = me.GetComponent<UnitBrain> ().speed;
+			}
+			if (Mathf.Abs (me.transform.position.x) > 5.41) {
+				Destroy (me);
+			}
+			if (Mathf.Abs (me.transform.position.y) > 5.41) {
+				Destroy (me);
+			}
+		}; 
+		raceArray [1].GetComponent<Race>().createAbility[3] =  delegate(GameObject me) {} ; raceArray [1].GetComponent<Race>().collisionAbility[3] = delegate(GameObject me) {} ;
 
 	}
 	//int fps = Mathf.RoundToInt(1.0f/Time.deltaTime) ;
