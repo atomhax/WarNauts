@@ -109,15 +109,93 @@ public class globalVariables : MonoBehaviour {
 		
 		
 		
-		raceArray[0].GetComponent<Race>().unitName[0] = "Moment" ;		 raceArray [0].GetComponent<Race>().unitSpeed [0] = 0.8f; 	raceArray [0].GetComponent<Race>().unitAtkDelay [0] = 1000f;	raceArray [0].GetComponent<Race>().unitAtkDamage [0] = 20f;		raceArray [0].GetComponent<Race>().unitMaxHealth [0] = 140f;		raceArray [0].GetComponent<Race>().unitArmor [0] = 0f;	raceArray [0].GetComponent<Race>().unitSprite [0] = Resources.Load<Sprite> ("unit1");	raceArray [0].GetComponent<Race>().unitCooldown [0] = 2.2f;	raceArray [0].GetComponent<Race>().unitRange [0] = 0.87f;		 
-		raceArray[0].GetComponent<Race>().unitName[1] = "Jiffy" ;		 raceArray [0].GetComponent<Race>().unitSpeed [1] = 1.2f; 	raceArray [0].GetComponent<Race>().unitAtkDelay [1] = 500f;		raceArray [0].GetComponent<Race>().unitAtkDamage [1] = 10f;		raceArray [0].GetComponent<Race>().unitMaxHealth [1] = 150f;		raceArray [0].GetComponent<Race>().unitArmor [1] = 0f;	raceArray [0].GetComponent<Race>().unitSprite [1] = Resources.Load<Sprite> ("unit2");	raceArray [0].GetComponent<Race>().unitCooldown [1] = 3.0f; raceArray [0].GetComponent<Race>().unitRange [1] = 1.0f;	
-		raceArray[0].GetComponent<Race>().unitName[2] = "Century" ;		 raceArray [0].GetComponent<Race>().unitSpeed [2] = 0.3f; 	raceArray [0].GetComponent<Race>().unitAtkDelay [2] = 100f;		raceArray [0].GetComponent<Race>().unitAtkDamage [2] = 5.5f;	raceArray [0].GetComponent<Race>().unitMaxHealth [2] = 350f;		raceArray [0].GetComponent<Race>().unitArmor [2] = 3f;	raceArray [0].GetComponent<Race>().unitSprite [2] = Resources.Load<Sprite> ("unit3");	raceArray [0].GetComponent<Race>().unitCooldown [2] = 4.0f; raceArray [0].GetComponent<Race>().unitRange [2] = 0.5f;	
-		raceArray[0].GetComponent<Race>().unitName[3] = "Eon" ;		 	raceArray [0].GetComponent<Race>().unitSpeed [3] = 0.35f;	raceArray [0].GetComponent<Race>().unitAtkDelay [3] = 4200f;	raceArray [0].GetComponent<Race>().unitAtkDamage [3] = 100f;	raceArray [0].GetComponent<Race>().unitMaxHealth [3] = 100f;		raceArray [0].GetComponent<Race>().unitArmor [3] = 2f;	raceArray [0].GetComponent<Race>().unitSprite [3] = Resources.Load<Sprite> ("unit4");	raceArray [0].GetComponent<Race>().unitCooldown [3] = 5.0f; raceArray [0].GetComponent<Race>().unitRange [3] = 3.6f;	
-		raceArray[0].GetComponent<Race>().unitName[4] = "Leap Year" ;	 raceArray [0].GetComponent<Race>().unitSpeed [4] = 0.25f;	raceArray [0].GetComponent<Race>().unitAtkDelay [4] = 400f;		raceArray [0].GetComponent<Race>().unitAtkDamage [4] = 20f;		raceArray [0].GetComponent<Race>().unitMaxHealth [4] = 160f;		raceArray [0].GetComponent<Race>().unitArmor [4] = 3f;	raceArray [0].GetComponent<Race>().unitSprite [4] = Resources.Load<Sprite> ("unit5");	raceArray [0].GetComponent<Race>().unitCooldown [4] = 3.7f; raceArray [0].GetComponent<Race>().unitRange [4] = 0.9f;	
-		raceArray[0].GetComponent<Race>().unitName[5] = "NanoSecond" ;	 raceArray [0].GetComponent<Race>().unitSpeed [5] = 0.9f;	raceArray [0].GetComponent<Race>().unitAtkDelay [5] = 600f;		raceArray [0].GetComponent<Race>().unitAtkDamage [5] = 10f;		raceArray [0].GetComponent<Race>().unitMaxHealth [5] = 80f;			raceArray [0].GetComponent<Race>().unitArmor [5] = 0f;	raceArray [0].GetComponent<Race>().unitSprite [5] = Resources.Load<Sprite> ("unit6");	raceArray [0].GetComponent<Race>().unitCooldown [5] = 2.8f; raceArray [0].GetComponent<Race>().unitRange [5] = 0.4f;
-		raceArray[0].GetComponent<Race>().unitName[6] = "Lifetime" ;	 raceArray [0].GetComponent<Race>().unitSpeed [6] = 0.6f;	raceArray [0].GetComponent<Race>().unitAtkDelay [6] = 1700f;	raceArray [0].GetComponent<Race>().unitAtkDamage [6] = 20f;		raceArray [0].GetComponent<Race>().unitMaxHealth [6] = 220f;		raceArray [0].GetComponent<Race>().unitArmor [6] = 0f;	raceArray [0].GetComponent<Race>().unitSprite [6] = Resources.Load<Sprite> ("unit7");	raceArray [0].GetComponent<Race>().unitCooldown [6] = 3.7f; raceArray [0].GetComponent<Race>().unitRange [6] = 1.1f;
-		raceArray[0].GetComponent<Race>().unitName[7] = "Meridian" ;	 raceArray [0].GetComponent<Race>().unitSpeed [7] = 1.0f;	raceArray [0].GetComponent<Race>().unitAtkDelay [7] = 1000f;	raceArray [0].GetComponent<Race>().unitAtkDamage [7] = 20f;		raceArray [0].GetComponent<Race>().unitMaxHealth [7] = 420f;		raceArray [0].GetComponent<Race>().unitArmor [7] = 4f;	raceArray [0].GetComponent<Race>().unitSprite [7] = Resources.Load<Sprite> ("unit8");	raceArray [0].GetComponent<Race>().unitCooldown [7] = 6.5f; raceArray [0].GetComponent<Race>().unitRange [7] = 0.8f;
-		raceArray[0].GetComponent<Race>().unitName[8] = "Millenium" ;	 raceArray [0].GetComponent<Race>().unitSpeed [8] = 0.1f;	raceArray [0].GetComponent<Race>().unitAtkDelay [8] = 60f;		raceArray [0].GetComponent<Race>().unitAtkDamage [8] = 5f;		raceArray [0].GetComponent<Race>().unitMaxHealth [8] = 700f;		raceArray [0].GetComponent<Race>().unitArmor [8] = 6f;	raceArray [0].GetComponent<Race>().unitSprite [8] = Resources.Load<Sprite> ("unit9");	raceArray [0].GetComponent<Race>().unitCooldown [8] = 10f; raceArray [0].GetComponent<Race>().unitRange [8] = 0.6f;
+		raceArray[0].GetComponent<Race>().unitName[0] = "Moment" ;
+		raceArray [0].GetComponent<Race>().unitSpeed [0] = 0.8f; 	
+		raceArray [0].GetComponent<Race>().unitAtkDelay [0] = 1000f;	
+		raceArray [0].GetComponent<Race>().unitAtkDamage [0] = 20f;		
+		raceArray [0].GetComponent<Race>().unitMaxHealth [0] = 140f;		
+		raceArray [0].GetComponent<Race>().unitArmor [0] = 0f;	
+		raceArray [0].GetComponent<Race>().unitSprite [0] = Resources.Load<Sprite> ("unit1");	
+		raceArray [0].GetComponent<Race>().unitCooldown [0] = 2.2f;	
+		raceArray [0].GetComponent<Race>().unitRange [0] = 0.87f;	
+
+		raceArray[0].GetComponent<Race>().unitName[1] = "Jiffy" ;		 
+		raceArray [0].GetComponent<Race>().unitSpeed [1] = 1.2f; 	
+		raceArray [0].GetComponent<Race>().unitAtkDelay [1] = 500f;		
+		raceArray [0].GetComponent<Race>().unitAtkDamage [1] = 10f;		
+		raceArray [0].GetComponent<Race>().unitMaxHealth [1] = 150f;		
+		raceArray [0].GetComponent<Race>().unitArmor [1] = 0f;	
+		raceArray [0].GetComponent<Race>().unitSprite [1] = Resources.Load<Sprite> ("unit2");	
+		raceArray [0].GetComponent<Race>().unitCooldown [1] = 3.0f; 
+		raceArray [0].GetComponent<Race>().unitRange [1] = 1.0f;	
+
+		raceArray[0].GetComponent<Race>().unitName[2] = "Century" ;		 
+		raceArray [0].GetComponent<Race>().unitSpeed [2] = 0.3f; 	
+		raceArray [0].GetComponent<Race>().unitAtkDelay [2] = 100f;		
+		raceArray [0].GetComponent<Race>().unitAtkDamage [2] = 5.5f;	
+		raceArray [0].GetComponent<Race>().unitMaxHealth [2] = 350f;		
+		raceArray [0].GetComponent<Race>().unitArmor [2] = 3f;	
+		raceArray [0].GetComponent<Race>().unitSprite [2] = Resources.Load<Sprite> ("unit3");	
+		raceArray [0].GetComponent<Race>().unitCooldown [2] = 4.0f; 
+		raceArray [0].GetComponent<Race>().unitRange [2] = 0.5f;	
+
+		raceArray[0].GetComponent<Race>().unitName[3] = "Eon" ;		 	
+		raceArray [0].GetComponent<Race>().unitSpeed [3] = 0.35f;	
+		raceArray [0].GetComponent<Race>().unitAtkDelay [3] = 4200f;	
+		raceArray [0].GetComponent<Race>().unitAtkDamage [3] = 100f;	
+		raceArray [0].GetComponent<Race>().unitMaxHealth [3] = 100f;		
+		raceArray [0].GetComponent<Race>().unitArmor [3] = 2f;	
+		raceArray [0].GetComponent<Race>().unitSprite [3] = Resources.Load<Sprite> ("unit4");	
+		raceArray [0].GetComponent<Race>().unitCooldown [3] = 5.0f; 
+		raceArray [0].GetComponent<Race>().unitRange [3] = 3.6f;	
+
+		raceArray[0].GetComponent<Race>().unitName[4] = "Leap Year" ;	 
+		raceArray [0].GetComponent<Race>().unitSpeed [4] = 0.25f;	
+		raceArray [0].GetComponent<Race>().unitAtkDelay [4] = 400f;		
+		raceArray [0].GetComponent<Race>().unitAtkDamage [4] = 20f;		
+		raceArray [0].GetComponent<Race>().unitMaxHealth [4] = 160f;		
+		raceArray [0].GetComponent<Race>().unitArmor [4] = 3f;	
+		raceArray [0].GetComponent<Race>().unitSprite [4] = Resources.Load<Sprite> ("unit5");	
+		raceArray [0].GetComponent<Race>().unitCooldown [4] = 3.7f; raceArray [0].GetComponent<Race>().unitRange [4] = 0.9f;
+
+		raceArray[0].GetComponent<Race>().unitName[5] = "NanoSecond" ;	
+		raceArray [0].GetComponent<Race>().unitSpeed [5] = 0.9f;	
+		raceArray [0].GetComponent<Race>().unitAtkDelay [5] = 600f;		
+		raceArray [0].GetComponent<Race>().unitAtkDamage [5] = 10f;		
+		raceArray [0].GetComponent<Race>().unitMaxHealth [5] = 80f;			
+		raceArray [0].GetComponent<Race>().unitArmor [5] = 0f;	
+		raceArray [0].GetComponent<Race>().unitSprite [5] = Resources.Load<Sprite> ("unit6");	
+		raceArray [0].GetComponent<Race>().unitCooldown [5] = 2.8f; raceArray [0].GetComponent<Race>().unitRange [5] = 0.4f;
+
+		raceArray[0].GetComponent<Race>().unitName[6] = "Lifetime" ;	 
+		raceArray [0].GetComponent<Race>().unitSpeed [6] = 0.6f;	
+		raceArray [0].GetComponent<Race>().unitAtkDelay [6] = 1700f;	
+		raceArray [0].GetComponent<Race>().unitAtkDamage [6] = 20f;		
+		raceArray [0].GetComponent<Race>().unitMaxHealth [6] = 220f;		
+		raceArray [0].GetComponent<Race>().unitArmor [6] = 0f;	
+		raceArray [0].GetComponent<Race>().unitSprite [6] = Resources.Load<Sprite> ("unit7");	
+		raceArray [0].GetComponent<Race>().unitCooldown [6] = 3.7f; 
+		raceArray [0].GetComponent<Race>().unitRange [6] = 1.1f;
+
+		raceArray[0].GetComponent<Race>().unitName[7] = "Meridian" ;	 
+		raceArray [0].GetComponent<Race>().unitSpeed [7] = 1.0f;	
+		raceArray [0].GetComponent<Race>().unitAtkDelay [7] = 1000f;	
+		raceArray [0].GetComponent<Race>().unitAtkDamage [7] = 20f;		
+		raceArray [0].GetComponent<Race>().unitMaxHealth [7] = 420f;		
+		raceArray [0].GetComponent<Race>().unitArmor [7] = 4f;	
+		raceArray [0].GetComponent<Race>().unitSprite [7] = Resources.Load<Sprite> ("unit8");	
+		raceArray [0].GetComponent<Race>().unitCooldown [7] = 6.5f; 
+		raceArray [0].GetComponent<Race>().unitRange [7] = 0.8f;
+
+		raceArray[0].GetComponent<Race>().unitName[8] = "Millenium" ;	 
+		raceArray [0].GetComponent<Race>().unitSpeed [8] = 0.1f;	
+		raceArray [0].GetComponent<Race>().unitAtkDelay [8] = 60f;		
+		raceArray [0].GetComponent<Race>().unitAtkDamage [8] = 5f;		
+		raceArray [0].GetComponent<Race>().unitMaxHealth [8] = 700f;	
+		raceArray [0].GetComponent<Race>().unitArmor [8] = 6f;	
+		raceArray [0].GetComponent<Race>().unitSprite [8] = Resources.Load<Sprite> ("unit9");
+		raceArray [0].GetComponent<Race>().unitCooldown [8] = 10f;
+		raceArray [0].GetComponent<Race>().unitRange [8] = 0.6f;
 		
 		
 		
@@ -245,11 +323,55 @@ public class globalVariables : MonoBehaviour {
 		} ;
 		
 		
-		raceArray[1].GetComponent<Race>().unitName[0] = "Buzzgrunt" ;		 raceArray [1].GetComponent<Race>().unitSpeed [0] = 1.1f; 	raceArray [1].GetComponent<Race>().unitAtkDelay [0] = 50f;	 raceArray [1].GetComponent<Race>().unitAtkDamage [0] = 2.5f;		raceArray [1].GetComponent<Race>().unitMaxHealth [0] = 150f;		raceArray [1].GetComponent<Race>().unitArmor [0] = 0f;	raceArray [1].GetComponent<Race>().unitSprite [0] = Resources.Load<Sprite> ("unit10");	raceArray [1].GetComponent<Race>().unitCooldown [0] = 2.6f;	raceArray [1].GetComponent<Race>().unitRange [0] = 0.15f;		 
-		raceArray[1].GetComponent<Race>().unitName[1] = "Buzzdodger" ;		 raceArray [1].GetComponent<Race>().unitSpeed [1] = 1.0f; 	raceArray [1].GetComponent<Race>().unitAtkDelay [1] = 80f;	 raceArray [1].GetComponent<Race>().unitAtkDamage [1] = 3.2f;		raceArray [1].GetComponent<Race>().unitMaxHealth [1] = 120f;		raceArray [1].GetComponent<Race>().unitArmor [1] = 0f;	raceArray [1].GetComponent<Race>().unitSprite [1] = Resources.Load<Sprite> ("unit11");	raceArray [1].GetComponent<Race>().unitCooldown [1] = 3.0f;	raceArray [1].GetComponent<Race>().unitRange [1] = 0.15f;		 
-		raceArray[1].GetComponent<Race>().unitName[2] = "Boomstick" ;		 raceArray [1].GetComponent<Race>().unitSpeed [2] = 2.5f; 	raceArray [1].GetComponent<Race>().unitAtkDelay [2] = 1000f; raceArray [1].GetComponent<Race>().unitAtkDamage [2] = 0f;			raceArray [1].GetComponent<Race>().unitMaxHealth [2] = 40f;			raceArray [1].GetComponent<Race>().unitArmor [2] = 2f;	raceArray [1].GetComponent<Race>().unitSprite [2] = Resources.Load<Sprite> ("unit12");	raceArray [1].GetComponent<Race>().unitCooldown [2] = 2.2f;	raceArray [1].GetComponent<Race>().unitRange [2] = 0.05f;		 
-		raceArray[1].GetComponent<Race>().unitName[3] = "Junker" ;		 	 raceArray [1].GetComponent<Race>().unitSpeed [3] = 0.7f; 	raceArray [1].GetComponent<Race>().unitAtkDelay [3] = 500f;  raceArray [1].GetComponent<Race>().unitAtkDamage [3] = 12f;		raceArray [1].GetComponent<Race>().unitMaxHealth [3] = 130f;		raceArray [1].GetComponent<Race>().unitArmor [3] = 0f;	raceArray [1].GetComponent<Race>().unitSprite [3] = Resources.Load<Sprite> ("unit13");	raceArray [1].GetComponent<Race>().unitCooldown [3] = 3.0f;	raceArray [1].GetComponent<Race>().unitRange [3] = 0.4f;		 
-		raceArray[1].GetComponent<Race>().unitName[4] = "Buckshooter" ;		 raceArray [1].GetComponent<Race>().unitSpeed [4] = 0.8f; 	raceArray [1].GetComponent<Race>().unitAtkDelay [4] = 1500f; raceArray [1].GetComponent<Race>().unitAtkDamage [4] = 140f;		raceArray [1].GetComponent<Race>().unitMaxHealth [4] = 200f;		raceArray [1].GetComponent<Race>().unitArmor [4] = 0f;	raceArray [1].GetComponent<Race>().unitSprite [4] = Resources.Load<Sprite> ("unit14");	raceArray [1].GetComponent<Race>().unitCooldown [4] = 4.0f;	raceArray [1].GetComponent<Race>().unitRange [4] = 0.25f;		 
+		raceArray[1].GetComponent<Race>().unitName[0] = "Buzzgrunt" ;		
+		raceArray [1].GetComponent<Race>().unitSpeed [0] = 1.1f; 	
+		raceArray [1].GetComponent<Race>().unitAtkDelay [0] = 50f;	 
+		raceArray [1].GetComponent<Race>().unitAtkDamage [0] = 2.5f;		
+		raceArray [1].GetComponent<Race>().unitMaxHealth [0] = 150f;		
+		raceArray [1].GetComponent<Race>().unitArmor [0] = 0f;	
+		raceArray [1].GetComponent<Race>().unitSprite [0] = Resources.Load<Sprite> ("unit10");
+		raceArray [1].GetComponent<Race>().unitCooldown [0] = 2.6f;
+		raceArray [1].GetComponent<Race>().unitRange [0] = 0.15f;	
+		
+		raceArray[1].GetComponent<Race>().unitName[1] = "Buzzdodger" ;		
+		raceArray [1].GetComponent<Race>().unitSpeed [1] = 1.0f; 	
+		raceArray [1].GetComponent<Race>().unitAtkDelay [1] = 80f;	 
+		raceArray [1].GetComponent<Race>().unitAtkDamage [1] = 3.2f;		
+		raceArray [1].GetComponent<Race>().unitMaxHealth [1] = 120f;	
+		raceArray [1].GetComponent<Race>().unitArmor [1] = 0f;	
+		raceArray [1].GetComponent<Race>().unitSprite [1] = Resources.Load<Sprite> ("unit11");
+		raceArray [1].GetComponent<Race>().unitCooldown [1] = 3.0f;	
+		raceArray [1].GetComponent<Race>().unitRange [1] = 0.15f;	
+
+		raceArray[1].GetComponent<Race>().unitName[2] = "Boomstick" ;		
+		raceArray [1].GetComponent<Race>().unitSpeed [2] = 2.5f; 
+		raceArray [1].GetComponent<Race>().unitAtkDelay [2] = 1000f;
+		raceArray [1].GetComponent<Race>().unitAtkDamage [2] = 0f;			
+		raceArray [1].GetComponent<Race>().unitMaxHealth [2] = 40f;			
+		raceArray [1].GetComponent<Race>().unitArmor [2] = 2f;	
+		raceArray [1].GetComponent<Race>().unitSprite [2] = Resources.Load<Sprite> ("unit12");	
+		raceArray [1].GetComponent<Race>().unitCooldown [2] = 2.2f;	
+		raceArray [1].GetComponent<Race>().unitRange [2] = 0.05f;	
+
+		raceArray[1].GetComponent<Race>().unitName[3] = "Junker" ;		 	 
+		raceArray [1].GetComponent<Race>().unitSpeed [3] = 0.7f; 	
+		raceArray [1].GetComponent<Race>().unitAtkDelay [3] = 500f; 
+		raceArray [1].GetComponent<Race>().unitAtkDamage [3] = 12f;	
+		raceArray [1].GetComponent<Race>().unitMaxHealth [3] = 130f;	
+		raceArray [1].GetComponent<Race>().unitArmor [3] = 0f;
+		raceArray [1].GetComponent<Race>().unitSprite [3] = Resources.Load<Sprite> ("unit13");	
+		raceArray [1].GetComponent<Race>().unitCooldown [3] = 3.0f;	
+		raceArray [1].GetComponent<Race>().unitRange [3] = 0.4f;
+
+		raceArray[1].GetComponent<Race>().unitName[4] = "Buckshooter" ;		
+		raceArray [1].GetComponent<Race>().unitSpeed [4] = 0.8f; 
+		raceArray [1].GetComponent<Race>().unitAtkDelay [4] = 1500f;
+		raceArray [1].GetComponent<Race>().unitAtkDamage [4] = 140f;	
+		raceArray [1].GetComponent<Race>().unitMaxHealth [4] = 200f;		
+		raceArray [1].GetComponent<Race>().unitArmor [4] = 0f;	
+		raceArray [1].GetComponent<Race>().unitSprite [4] = Resources.Load<Sprite> ("unit14");
+		raceArray [1].GetComponent<Race>().unitCooldown [4] = 4.0f;
+		raceArray [1].GetComponent<Race>().unitRange [4] = 0.25f;		 
 		
 		
 		
