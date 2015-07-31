@@ -15,6 +15,7 @@ public class UnitBrain : MonoBehaviour {
 	public string team ;
 	public short axis ;
 	public GameObject enemy ;
+	public GameObject creator ;
 	public float hspeed ;
 	public Sprite mySprite ;
 	public AbilityDelegate createAbility ;
@@ -33,6 +34,7 @@ public class UnitBrain : MonoBehaviour {
 	public float currentHealth;
 
 	void Start () {
+		healthBar = transform.GetChild(0).GetChild(0).gameObject.GetComponent<Slider>() ;
 		rbd = GetComponent<Rigidbody2D> ();
 		healthBar.value = 1;
 		hspeed = speed;

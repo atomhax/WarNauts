@@ -40,10 +40,11 @@ public class UnitCreator : MonoBehaviour {
 				brain.deathAbility = race.GetComponent<Race>().deathAbility[selector.currentlySelected] ;
 				brain.raceGimmick = race.GetComponent<Race>().raceGimmick ;
 				brain.mySprite = race.GetComponent<Race>().unitSprite[selector.currentlySelected] ;
-				brain.healthBar = newUnit.gameObject.transform.GetChild(0).GetChild(0).gameObject.GetComponent<Slider>() ;
+				//brain.healthBar = newUnit.gameObject.transform.GetChild(0).GetChild(0).gameObject.GetComponent<Slider>() ;
 				brain.axis = GetComponent<ArrowMovement>().axis ;
 				brain.team = team ;
 				brain.row = gameObject.GetComponent<ArrowMovement>().currentRow ;
+				brain.creator = gameObject;
 
 				for (int i = 0; i < unitCooldowns.Length; i++) {
 					unitCooldowns[i] = race.GetComponent<Race>().unitCooldown[i];
