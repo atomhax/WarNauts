@@ -37,6 +37,8 @@ public class UnitCreator : MonoBehaviour {
 				brain.createAbility = race.GetComponent<Race>().createAbility[selector.currentlySelected] ;
 				brain.collisionAbility = race.GetComponent<Race>().collisionAbility[selector.currentlySelected] ;
 				brain.passiveAbility = race.GetComponent<Race>().passiveAbility[selector.currentlySelected] ;
+				brain.deathAbility = race.GetComponent<Race>().deathAbility[selector.currentlySelected] ;
+				brain.raceGimmick = race.GetComponent<Race>().raceGimmick ;
 				brain.mySprite = race.GetComponent<Race>().unitSprite[selector.currentlySelected] ;
 				brain.healthBar = newUnit.gameObject.transform.GetChild(0).GetChild(0).gameObject.GetComponent<Slider>() ;
 				brain.axis = GetComponent<ArrowMovement>().axis ;

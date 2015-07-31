@@ -19,9 +19,11 @@ public class UnitBrain : MonoBehaviour {
 	public Sprite mySprite ;
 	public AbilityDelegate createAbility ;
 	public AbilityDelegate passiveAbility ;
+	public AbilityDelegate deathAbility ;
 	public CollisionDelegate collisionAbility ;
 	public int row ;
 	public Rigidbody2D rbd ;
+	public GimmickDelegate raceGimmick ;
 	
 	public float[] abilityNumbers = new float[10] ;
 	public float atkCooldown ;
@@ -39,6 +41,7 @@ public class UnitBrain : MonoBehaviour {
 		gameObject.GetComponent<SpriteRenderer> ().sprite = mySprite;
 		gameObject.transform.GetChild (1).GetComponent<BoxCollider2D> ().size = new Vector2 (range,0.25f);	
 		gameObject.transform.GetChild (1).GetComponent<BoxCollider2D> ().offset += new Vector2 ((range-0.87f)/2,0);	
+		//Debug.Log ("START!!");
 
 
 		currentHealth = maxHealth ;
@@ -60,14 +63,18 @@ public class UnitBrain : MonoBehaviour {
 			moveDirection = 1 ;
 			break;
 		}
+		raceGimmick (gameObject, 0);
 		createAbility (gameObject);
 	}
 
 	void FixedUpdate () {
 		healthBar.value = ((currentHealth)/(maxHealth)); 
+		raceGimmick (gameObject, 1);
 		passiveAbility (gameObject);
 
 		if ((currentHealth <= 0)) {
+			deathAbility(gameObject) ;
+			raceGimmick (gameObject, 2);
 			Destroy(gameObject) ;
 		} 
 		

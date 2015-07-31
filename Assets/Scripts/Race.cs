@@ -18,7 +18,9 @@ public class Race : MonoBehaviour {
 	public float[] unitCooldown ;
 	public AbilityDelegate[] createAbility ;
 	public AbilityDelegate[] passiveAbility ;
+	public AbilityDelegate[] deathAbility ;
 	public CollisionDelegate[] collisionAbility ;
+	public GimmickDelegate raceGimmick ;
 
 	//void 
 	// Use this for initialization
