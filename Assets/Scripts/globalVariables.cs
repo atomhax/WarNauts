@@ -253,6 +253,42 @@ public class globalVariables : MonoBehaviour {
 		}; 
 		raceArray [1].GetComponent<Race>().createAbility[3] =  delegate(GameObject me) {} ; raceArray [1].GetComponent<Race>().collisionAbility[3] = delegate(GameObject me, GameObject other) {} ;
 
+
+
+		raceArray[1].GetComponent<Race>().passiveAbility[3] = delegate(GameObject me) {
+			if (me.GetComponent<UnitBrain> ().axis % 2 == 0) {
+				me.GetComponent<UnitBrain> ().rbd.MovePosition (new Vector2 (me.GetComponent<UnitBrain> ().rbd.position.x + (me.GetComponent<UnitBrain> ().hspeed * Time.fixedDeltaTime * me.GetComponent<UnitBrain> ().moveDirection), me.GetComponent<UnitBrain> ().rbd.position.y));
+			} else {
+				me.GetComponent<UnitBrain> ().rbd.MovePosition (new Vector2 (me.GetComponent<UnitBrain> ().rbd.position.x, me.GetComponent<UnitBrain> ().rbd.position.y + (me.GetComponent<UnitBrain> ().hspeed * Time.fixedDeltaTime * me.GetComponent<UnitBrain> ().moveDirection)));		
+			}
+			me.GetComponent<UnitBrain> ().atkCooldown -= 1000 * Time.deltaTime;
+			if (me.GetComponent<UnitBrain> ().enemy != null) {
+				me.GetComponent<UnitBrain> ().hspeed = 0f;
+				if (me.GetComponent<UnitBrain> ().atkCooldown <= 0) {
+					me.GetComponent<UnitBrain> ().atkCooldown = me.GetComponent<UnitBrain> ().atkDelay;
+					me.GetComponent<UnitBrain> ().enemy.GetComponent<UnitBrain> ().currentHealth -= me.GetComponent<UnitBrain> ().damage - me.GetComponent<UnitBrain> ().enemy.GetComponent<UnitBrain> ().armor;
+					if (me.GetComponent<UnitBrain> ().enemy.GetComponent<UnitBrain> ().currentHealth <= 0) {
+						me.GetComponent<UnitBrain> ().enemy = null;
+						GameObject newUnit = Instantiate(me) ;
+						newUnit.GetComponent<UnitBrain>().speed = (Random.value+0.5f)*newUnit.GetComponent<UnitBrain>().speed ;
+						newUnit.GetComponent<UnitBrain>().createAbility = me.GetComponent<UnitBrain>().createAbility ;
+						newUnit.GetComponent<UnitBrain>().collisionAbility = me.GetComponent<UnitBrain>().collisionAbility ;
+						newUnit.GetComponent<UnitBrain>().passiveAbility = me.GetComponent<UnitBrain>().passiveAbility ;
+					}
+				}
+				
+			} else {
+				me.GetComponent<UnitBrain> ().hspeed = me.GetComponent<UnitBrain> ().speed;
+			}
+			if (Mathf.Abs (me.transform.position.x) > 5.41) {
+				Destroy (me);
+			}
+			if (Mathf.Abs (me.transform.position.y) > 5.41) {
+				Destroy (me);
+			}
+		}; 
+		raceArray [1].GetComponent<Race>().createAbility[3] =  delegate(GameObject me) {} ; raceArray [1].GetComponent<Race>().collisionAbility[3] = delegate(GameObject me) {} ;
+
 	}
 	//int fps = Mathf.RoundToInt(1.0f/Time.deltaTime) ;
 }
