@@ -548,8 +548,9 @@ public class globalVariables : MonoBehaviour {
 				me.GetComponent<UnitBrain>().abilityObjects[0].transform.position = new Vector3(me.transform.position.x-(((me.GetComponent<UnitBrain>().axis%2)-1)*0.3f*me.GetComponent<UnitBrain>().moveDirection),me.transform.position.y+((me.GetComponent<UnitBrain>().axis%2)*0.3f*me.GetComponent<UnitBrain>().moveDirection),0f) ;   
 			}
 		};
-		raceArray [1].GetComponent<Race>().createAbility[7] =  delegate(GameObject me) {
-			me.GetComponent<UnitBrain>().abilityNumbers[0] = 0f ;
+		raceArray [1].GetComponent<Race> ().createAbility [7] = delegate(GameObject me) {
+			me.GetComponent<UnitBrain> ().abilityNumbers [0] = 0f;
+			me.transform.position = new Vector3 (me.transform.position.x + (((me.GetComponent<UnitBrain> ().axis % 2) - 1) * 0.3f * me.GetComponent<UnitBrain> ().moveDirection), me.transform.position.y - ((me.GetComponent<UnitBrain> ().axis % 2) * 0.3f * me.GetComponent<UnitBrain> ().moveDirection), 0f);   
 		} ;
 		raceArray [1].GetComponent<Race>().collisionAbility[7] = delegate(GameObject me, GameObject other) {
 			if((other.GetComponent<colliderBrain>().type == 0)&&(me.GetComponent<UnitBrain>().abilityObjects[0]==null)) {
