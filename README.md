@@ -6,10 +6,10 @@ Chronowarpers
   - Frontline Portal (Makes units spawn at it instead of the arrow)
 
 Nedrex
-  - Sandbag Dropper
-  - Shotgun Tank
-  - Wonky lanes
-  - Explodes on death
+  - Sandbag Dropper- Done
+  - Shotgun Tank- Done
+  - Wonky lanes- Done
+  - Explodes on death- Done
   
 Nameless Deception Race
   - Unit that comes out the opponent's side

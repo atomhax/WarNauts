@@ -27,6 +27,7 @@ public class UnitBrain : MonoBehaviour {
 	public GimmickDelegate raceGimmick ;
 	
 	public float[] abilityNumbers = new float[10] ;
+	public GameObject[] abilityObjects = new GameObject[3] ;
 	public float atkCooldown ;
 
 
