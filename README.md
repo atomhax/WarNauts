@@ -4,12 +4,14 @@ Unity 'clone' of Warlords: Call to Arms
 Ideas:
 Chronowarpers
   - Frontline Portal (Makes units spawn at it instead of the arrow)
+  - Moves:
+  - Move that causes all Chronomorph units to Teleport
 
 Nedrex
-  - Sandbag Dropper- Done
-  - Shotgun Tank- Done
-  - Wonky lanes- Done
-  - Explodes on death- Done
+ - More Slow Units
+ - Moves:
+ - Move that releases rockets on all rows.
+ - Move that causes all Nedrex units to explode 
   
 Nameless Deception Race
   - Unit that comes out the opponent's side
