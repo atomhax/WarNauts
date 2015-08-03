@@ -49,21 +49,19 @@ public class UnitBrain : MonoBehaviour {
 
 		currentHealth = maxHealth ;
 
+		moveDirection = 1;
 		switch (axis) {
 			case 0 :
 			moveDirection = -1 ;
 			transform.localScale = new Vector3((-1f)*transform.localScale.x,transform.localScale.y,transform.localScale.z) ;
 			break;
-			case 1 :
-			moveDirection = -1 ; 
+			case 1 : 
 			transform.Rotate(new Vector3(0,0,-90)) ;
 			break;
 			case 2 :
-			moveDirection = 1 ;
 			break;
 			case 3 :
 			transform.Rotate(new Vector3(0,0,90)) ;
-			moveDirection = 1 ;
 			break;
 		}
 		raceGimmick (gameObject, 0);
