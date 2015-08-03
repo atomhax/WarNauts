@@ -305,7 +305,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray [1].GetComponent<Race>().raceGimmick = delegate(GameObject me,int mode) {
 			switch (mode) {
 			case 0 :
-				me.transform.Rotate(new Vector3(0f,0f,me.transform.rotation.eulerAngles.z+((Random.value*10f)-5f))) ;
+				me.transform.Rotate(new Vector3(0f,0f,(Random.value*10f)-5f)) ; //me.transform.rotation.eulerAngles.z
 				break ;
 			case 1 :
 				break ;
