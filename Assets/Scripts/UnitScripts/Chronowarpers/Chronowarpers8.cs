@@ -14,6 +14,13 @@ public class Chronowarpers8 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//Debug.Log ("Running");
+		if (unitBrain.currentHealth <= 0f) {
+			GameObject explo = Instantiate(Resources.Load<GameObject>("explosion")) ;
+			explo.GetComponent<explosionBrain>().explosionDamage = 100f ;
+			explo.GetComponent<explosionBrain>().explosionSize = 1.2f ;
+			explo.GetComponent<explosionBrain>().explosionTime = 0.2f ;
+			explo.transform.position = transform.position ;
+		}
 	}
 
 	//Use LateUpdate for calls after UnitBrain

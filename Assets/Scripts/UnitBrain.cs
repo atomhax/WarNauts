@@ -25,6 +25,7 @@ public class UnitBrain : MonoBehaviour {
 	public int row ;
 	public Rigidbody2D rbd ;
 	public GimmickDelegate raceGimmick ;
+	public GameObject enteredRange;
 	
 	public float[] abilityNumbers = new float[10] ;
 	public GameObject[] abilityObjects = new GameObject[3] ;
@@ -91,7 +92,7 @@ public class UnitBrain : MonoBehaviour {
 		}
 		
 		healthBar.value = ((currentHealth)/(maxHealth)); 
-		raceGimmick (gameObject, 1);
+		//raceGimmick (gameObject, 1);
 		//passiveAbility (gameObject);
 		
 		if ((currentHealth <= 0)) {
