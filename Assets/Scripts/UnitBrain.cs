@@ -12,6 +12,7 @@ public class UnitBrain : MonoBehaviour {
 	public float maxHealth ;
 	public float armor ;
 	public Slider healthBar ;
+	public bool copy ;
 	public string team ;
 	public short axis ;
 	public GameObject enemy ;
@@ -33,8 +34,30 @@ public class UnitBrain : MonoBehaviour {
 
 	public short moveDirection ;
 	public float currentHealth;
+	void Awake() {
+		copy = false ;
+	}
 
 	void Start () {
+		if (copy == false) {
+			switch (axis) {
+			case 0 :
+				//moveDirection = -1 ;
+				//transform.localScale = new Vector3((-1f)*transform.localScale.x,transform.localScale.y,transform.localScale.z) ;
+				transform.Rotate(new Vector3(0,0,180)) ;
+				break;
+			case 1 : 
+				transform.Rotate(new Vector3(0,0,-90)) ;
+				break;
+			case 2 :
+				break;
+			case 3 :
+				transform.Rotate(new Vector3(0,0,90)) ;
+				break;
+			}
+			gameObject.transform.GetChild (1).GetComponent<BoxCollider2D> ().size = new Vector2 (range,0.25f);	
+			gameObject.transform.GetChild (1).GetComponent<BoxCollider2D> ().offset += new Vector2 ((range-0.87f)/2,0);	
+		}
 		healthBar = transform.GetChild(0).GetChild(0).gameObject.GetComponent<Slider>() ;
 		rbd = GetComponent<Rigidbody2D> ();
 		healthBar.value = 1;
@@ -42,28 +65,12 @@ public class UnitBrain : MonoBehaviour {
 		atkCooldown = 0;
 		
 		gameObject.GetComponent<SpriteRenderer> ().sprite = mySprite;
-		gameObject.transform.GetChild (1).GetComponent<BoxCollider2D> ().size = new Vector2 (range,0.25f);	
-		gameObject.transform.GetChild (1).GetComponent<BoxCollider2D> ().offset += new Vector2 ((range-0.87f)/2,0);	
 		//Debug.Log ("START!!");
 
 
 		currentHealth = maxHealth ;
 
 		moveDirection = 1;
-		switch (axis) {
-			case 0 :
-			moveDirection = -1 ;
-			transform.localScale = new Vector3((-1f)*transform.localScale.x,transform.localScale.y,transform.localScale.z) ;
-			break;
-			case 1 : 
-			transform.Rotate(new Vector3(0,0,-90)) ;
-			break;
-			case 2 :
-			break;
-			case 3 :
-			transform.Rotate(new Vector3(0,0,90)) ;
-			break;
-		}
 		//raceGimmick (gameObject, 0);
 		//createAbility (gameObject);
 	}

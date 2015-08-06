@@ -13,29 +13,12 @@ public class Nedrex3 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	if (unitBrain.atkCooldown <= 0&&unitBrain.enemy!=null) {
-		if (unitBrain.enemy.GetComponent<UnitBrain> ().currentHealth <= 0) {
+	if (unitBrain.atkCooldown <= 3&&unitBrain.enemy!=null) {
+		if (unitBrain.enemy.GetComponent<UnitBrain> ().currentHealth-unitBrain.damage <= 0) {
+				Debug.Log("I killed a man with this thumb") ;
 				newUnit = Instantiate(gameObject) ;
 				newUnit.GetComponent<UnitBrain>().speed = (Random.value+0.5f)*newUnit.GetComponent<UnitBrain>().speed ;
-				switch (newUnit.GetComponent<UnitBrain>().axis) {
-				case 0 :
-					newUnit.GetComponent<UnitBrain>().moveDirection = -1 ;
-					newUnit.transform.localScale = new Vector3((-1f)*newUnit.transform.localScale.x,newUnit.transform.localScale.y,newUnit.transform.localScale.z) ;
-					break;
-				case 1 :
-					newUnit.GetComponent<UnitBrain>().moveDirection = -1 ; 
-					newUnit.transform.Rotate(new Vector3(0,0,-90)) ;
-					break;
-				case 2 :
-					newUnit.GetComponent<UnitBrain>().moveDirection = 1 ;
-					break;
-				case 3 :
-					newUnit.transform.Rotate(new Vector3(0,0,90)) ;
-					newUnit.GetComponent<UnitBrain>().moveDirection = 1 ;
-					break;
-				}
-				newUnit.transform.GetChild (1).GetComponent<BoxCollider2D> ().size = new Vector2 (unitBrain.range,0.25f);
-				newUnit.transform.GetChild (1).GetComponent<BoxCollider2D> ().offset = new Vector2 (0.6f,0f);	
+				newUnit.GetComponent<UnitBrain>().copy = true ;
 			}
 		}
 	}
