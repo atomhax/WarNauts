@@ -7,10 +7,10 @@ public class Nedrex8 : MonoBehaviour {
 	void Start () {
 		unitBrain = GetComponent<UnitBrain> ();
 		if (unitBrain.name == "Unit(Clone)") {
-			for (int i=-1; i<1; i+=1) {
+			for (int i=-1; i<2; i+=1) {
 				GameObject newUnit = Instantiate (gameObject);
 				newUnit.transform.position = new Vector3 (transform.position.x + ((unitBrain.axis % 2) * 0.6f*i), transform.position.y - (((unitBrain.axis % 2) - 1) * 0.6f*i), 0f);
-				/*switch (newUnit.GetComponent<UnitBrain> ().axis) {
+				switch (newUnit.GetComponent<UnitBrain> ().axis) {
 				case 0:
 					newUnit.GetComponent<UnitBrain> ().moveDirection = -1;
 					newUnit.transform.localScale = new Vector3 ((-1f) * newUnit.transform.localScale.x, newUnit.transform.localScale.y, newUnit.transform.localScale.z);
@@ -26,7 +26,7 @@ public class Nedrex8 : MonoBehaviour {
 					newUnit.transform.Rotate (new Vector3 (0, 0, 90));
 					newUnit.GetComponent<UnitBrain> ().moveDirection = 1;
 					break;
-				}*/
+				}
 			}
 			Destroy(gameObject) ;
 		}

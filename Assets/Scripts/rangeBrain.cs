@@ -20,7 +20,7 @@ public class rangeBrain : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D other) { 
+	/*void OnTriggerEnter2D(Collider2D other) { 
 		transform.parent.GetComponent<UnitBrain>().collisionAbility(transform.parent.gameObject, other.gameObject);
-	}
+	}*/
 }

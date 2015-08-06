@@ -18,16 +18,16 @@ public class UnitBrain : MonoBehaviour {
 	public GameObject creator ;
 	public float hspeed ;
 	public Sprite mySprite ;
-	public AbilityDelegate createAbility ;
-	public AbilityDelegate passiveAbility ;
-	public AbilityDelegate deathAbility ;
-	public CollisionDelegate collisionAbility ;
+	//public AbilityDelegate createAbility ;
+	//public AbilityDelegate passiveAbility ;
+	//public AbilityDelegate deathAbility ;
+	//public CollisionDelegate collisionAbility ;
 	public int row ;
 	public Rigidbody2D rbd ;
-	public GimmickDelegate raceGimmick ;
+	//public GimmickDelegate raceGimmick ;
 	
-	public float[] abilityNumbers = new float[10] ;
-	public GameObject[] abilityObjects = new GameObject[3] ;
+	//public float[] abilityNumbers = new float[10] ;
+	//public GameObject[] abilityObjects = new GameObject[3] ;
 	public float atkCooldown ;
 
 
@@ -64,8 +64,8 @@ public class UnitBrain : MonoBehaviour {
 			transform.Rotate(new Vector3(0,0,90)) ;
 			break;
 		}
-		raceGimmick (gameObject, 0);
-		createAbility (gameObject);
+		//raceGimmick (gameObject, 0);
+		//createAbility (gameObject);
 	}
 
 	void LateUpdate (){
@@ -91,12 +91,12 @@ public class UnitBrain : MonoBehaviour {
 		}
 		
 		healthBar.value = ((currentHealth)/(maxHealth)); 
-		raceGimmick (gameObject, 1);
+		//raceGimmick (gameObject, 1);
 		//passiveAbility (gameObject);
 		
 		if ((currentHealth <= 0)) {
-			deathAbility(gameObject) ;
-			raceGimmick (gameObject, 2);
+			//deathAbility(gameObject) ;
+			//raceGimmick (gameObject, 2);
 			Destroy(gameObject) ;
 		} 
 	}

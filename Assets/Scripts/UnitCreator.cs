@@ -38,11 +38,11 @@ public class UnitCreator : MonoBehaviour {
 				brain.atkDelay = race.GetComponent<Race> ().unitAtkDelay [selector.currentlySelected];
 				brain.damage = race.GetComponent<Race> ().unitAtkDamage [selector.currentlySelected];
 				brain.range = race.GetComponent<Race> ().unitRange [selector.currentlySelected];
-				brain.createAbility = race.GetComponent<Race> ().createAbility [selector.currentlySelected];
-				brain.collisionAbility = race.GetComponent<Race> ().collisionAbility [selector.currentlySelected];
-				brain.passiveAbility = race.GetComponent<Race> ().passiveAbility [selector.currentlySelected];
-				brain.deathAbility = race.GetComponent<Race> ().deathAbility [selector.currentlySelected];
-				brain.raceGimmick = race.GetComponent<Race> ().raceGimmick;
+				//brain.createAbility = race.GetComponent<Race> ().createAbility [selector.currentlySelected];
+				//brain.collisionAbility = race.GetComponent<Race> ().collisionAbility [selector.currentlySelected];
+				//brain.passiveAbility = race.GetComponent<Race> ().passiveAbility [selector.currentlySelected];
+				//brain.deathAbility = race.GetComponent<Race> ().deathAbility [selector.currentlySelected];
+				//brain.raceGimmick = race.GetComponent<Race> ().raceGimmick;
 				brain.mySprite = race.GetComponent<Race> ().unitSprite [selector.currentlySelected];
 				//brain.healthBar = newUnit.gameObject.transform.GetChild(0).GetChild(0).gameObject.GetComponent<Slider>() ;
 				brain.axis = GetComponent<ArrowMovement> ().axis;

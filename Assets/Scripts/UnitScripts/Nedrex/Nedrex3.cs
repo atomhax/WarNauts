@@ -17,7 +17,7 @@ public class Nedrex3 : MonoBehaviour {
 		if (unitBrain.enemy.GetComponent<UnitBrain> ().currentHealth <= 0) {
 				newUnit = Instantiate(gameObject) ;
 				newUnit.GetComponent<UnitBrain>().speed = (Random.value+0.5f)*newUnit.GetComponent<UnitBrain>().speed ;
-				/*switch (newUnit.GetComponent<UnitBrain>().axis) {
+				switch (newUnit.GetComponent<UnitBrain>().axis) {
 				case 0 :
 					newUnit.GetComponent<UnitBrain>().moveDirection = -1 ;
 					newUnit.transform.localScale = new Vector3((-1f)*newUnit.transform.localScale.x,newUnit.transform.localScale.y,newUnit.transform.localScale.z) ;
@@ -35,7 +35,7 @@ public class Nedrex3 : MonoBehaviour {
 					break;
 				}
 				newUnit.transform.GetChild (1).GetComponent<BoxCollider2D> ().size = new Vector2 (unitBrain.range,0.25f);
-				newUnit.transform.GetChild (1).GetComponent<BoxCollider2D> ().offset = new Vector2 (0.6f,0f);	*/
+				newUnit.transform.GetChild (1).GetComponent<BoxCollider2D> ().offset = new Vector2 (0.6f,0f);	
 			}
 		}
 	}
