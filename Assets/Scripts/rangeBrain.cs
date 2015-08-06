@@ -22,6 +22,6 @@ public class rangeBrain : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) { 
-		//transform.parent.GetComponent<UnitBrain> ().enteredRange = other.gameObject;
+		transform.parent.GetComponent<UnitBrain> ().enteredRange = other.gameObject;
 	}
 }

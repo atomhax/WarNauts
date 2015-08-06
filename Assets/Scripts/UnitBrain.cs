@@ -15,6 +15,7 @@ public class UnitBrain : MonoBehaviour {
 	public string team ;
 	public short axis ;
 	public GameObject enemy ;
+	public GameObject enteredRange ;
 	public GameObject creator ;
 	public float hspeed ;
 	public Sprite mySprite ;
