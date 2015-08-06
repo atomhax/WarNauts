@@ -13,6 +13,7 @@ public class UnitCreator : MonoBehaviour {
 	float[] unitCooldowns ;
 	public GameObject race;
 	public string team ;
+	public GameObject arrow ;
 
 
 	// Use this for initialization
