@@ -68,16 +68,44 @@ public class UnitBrain : MonoBehaviour {
 		createAbility (gameObject);
 	}
 
-	void FixedUpdate () {
+	void LateUpdate (){
+		atkCooldown -= 1000 * Time.deltaTime;
+		if (enemy != null) {
+			hspeed = 0f;
+			if (atkCooldown <= 0) {
+				atkCooldown = atkDelay;
+				enemy.GetComponent<UnitBrain> ().currentHealth -= damage - enemy.GetComponent<UnitBrain> ().armor;
+				if (enemy.GetComponent<UnitBrain> ().currentHealth <= 0) {
+					enemy = null;
+				}
+			}
+			
+		} else {
+			hspeed = speed;
+		}
+		if (Mathf.Abs (transform.position.x) > 5.41) {
+			Destroy (gameObject);
+		}
+		if (Mathf.Abs (transform.position.y) > 5.41) {
+			Destroy (gameObject);
+		}
+		
 		healthBar.value = ((currentHealth)/(maxHealth)); 
 		raceGimmick (gameObject, 1);
-		passiveAbility (gameObject);
-
+		//passiveAbility (gameObject);
+		
 		if ((currentHealth <= 0)) {
 			deathAbility(gameObject) ;
 			raceGimmick (gameObject, 2);
 			Destroy(gameObject) ;
 		} 
+	}
+
+
+	void FixedUpdate () {
+		GetComponent<Rigidbody2D>().MovePosition(new Vector2 
+		 	(GetComponent<Rigidbody2D>().position.x + (hspeed* Time.fixedDeltaTime * moveDirection * Mathf.Cos(transform.rotation.eulerAngles.z * Mathf.Deg2Rad)), 
+		 	 GetComponent<Rigidbody2D>().position.y + (hspeed* Time.fixedDeltaTime * moveDirection * Mathf.Sin(transform.rotation.eulerAngles.z * Mathf.Deg2Rad)))) ;
 		
 	}
 }

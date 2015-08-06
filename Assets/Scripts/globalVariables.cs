@@ -36,8 +36,8 @@ public class globalVariables : MonoBehaviour {
 		
 		AbilityDelegate defaultPassiveAbility = delegate(GameObject me) {
 			me.GetComponent<Rigidbody2D>().MovePosition(new Vector2 
-			                                            (me.GetComponent<Rigidbody2D>().position.x + (me.GetComponent<UnitBrain>().hspeed* Time.fixedDeltaTime * me.GetComponent<UnitBrain>().moveDirection * Mathf.Cos(me.transform.rotation.eulerAngles.z * Mathf.Deg2Rad)), 
-			 me.GetComponent<Rigidbody2D>().position.y + (me.GetComponent<UnitBrain>().hspeed* Time.fixedDeltaTime * me.GetComponent<UnitBrain>().moveDirection * Mathf.Sin(me.transform.rotation.eulerAngles.z * Mathf.Deg2Rad)))) ;
+				(me.GetComponent<Rigidbody2D>().position.x + (me.GetComponent<UnitBrain>().hspeed* Time.fixedDeltaTime * me.GetComponent<UnitBrain>().moveDirection * Mathf.Cos(me.transform.rotation.eulerAngles.z * Mathf.Deg2Rad)), 
+			 	 me.GetComponent<Rigidbody2D>().position.y + (me.GetComponent<UnitBrain>().hspeed* Time.fixedDeltaTime * me.GetComponent<UnitBrain>().moveDirection * Mathf.Sin(me.transform.rotation.eulerAngles.z * Mathf.Deg2Rad)))) ;
 			
 			me.GetComponent<UnitBrain> ().atkCooldown -= 1000 * Time.deltaTime;
 			if (me.GetComponent<UnitBrain> ().enemy != null) {
@@ -199,7 +199,7 @@ public class globalVariables : MonoBehaviour {
 		
 		
 		
-		raceArray[0].GetComponent<Race>().passiveAbility[0] = delegate(GameObject me) {defaultPassiveAbility(me); me.GetComponent<UnitBrain>().currentHealth-=0.2f ;}; raceArray [0].GetComponent<Race>().createAbility[0] =  delegate(GameObject me) {} ; raceArray [0].GetComponent<Race>().collisionAbility[0] = delegate(GameObject me, GameObject other) {} ; raceArray[0].GetComponent<Race>().deathAbility[0] = delegate(GameObject me) {} ;
+		raceArray[0].GetComponent<Race>().passiveAbility[0] = defaultPassiveAbility ; raceArray [0].GetComponent<Race>().createAbility[0] =  delegate(GameObject me) {} ; raceArray [0].GetComponent<Race>().collisionAbility[0] = delegate(GameObject me, GameObject other) {} ; raceArray[0].GetComponent<Race>().deathAbility[0] = delegate(GameObject me) {} ;
 		raceArray[0].GetComponent<Race>().passiveAbility[1] = defaultPassiveAbility ; raceArray [0].GetComponent<Race>().createAbility[1] =  delegate(GameObject me) {} ; raceArray [0].GetComponent<Race>().collisionAbility[1] = delegate(GameObject me, GameObject other) {} ; raceArray[0].GetComponent<Race>().deathAbility[1] = delegate(GameObject me) {} ;
 		raceArray[0].GetComponent<Race>().passiveAbility[2] = defaultPassiveAbility ; raceArray [0].GetComponent<Race>().createAbility[2] =  delegate(GameObject me) {} ; raceArray [0].GetComponent<Race>().collisionAbility[2] = delegate(GameObject me, GameObject other) {} ; raceArray[0].GetComponent<Race>().deathAbility[2] = delegate(GameObject me) {} ;
 		raceArray[0].GetComponent<Race>().passiveAbility[3] = defaultPassiveAbility ; raceArray [0].GetComponent<Race>().createAbility[3] =  delegate(GameObject me) {} ; raceArray [0].GetComponent<Race>().collisionAbility[3] = delegate(GameObject me, GameObject other) {} ; raceArray[0].GetComponent<Race>().deathAbility[3] = delegate(GameObject me) {} ;
