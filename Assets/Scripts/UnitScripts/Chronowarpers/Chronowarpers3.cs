@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Chronowarpers3 : MonoBehaviour {
 
-	UnitBrain unitBrain;
+	/*UnitBrain unitBrain;
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +14,7 @@ public class Chronowarpers3 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//Debug.Log ("Running");
-	}
+	}*/
 
 	//Use LateUpdate for calls after UnitBrain
 }

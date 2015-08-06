@@ -24,7 +24,6 @@ public class UnitBrain : MonoBehaviour {
 	//public CollisionDelegate collisionAbility ;
 	public int row ;
 	public Rigidbody2D rbd ;
-	//public GimmickDelegate raceGimmick ;
 	
 	//public float[] abilityNumbers = new float[10] ;
 	//public GameObject[] abilityObjects = new GameObject[3] ;

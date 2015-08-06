@@ -2,9 +2,9 @@
 using System.Collections;
 
 public class Chronowarpers2 : MonoBehaviour {
-
-	UnitBrain unitBrain;
-
+	
+	/*UnitBrain unitBrain;
+	
 	// Use this for initialization
 	void Start () {
 		//Debug.Log ("Start");
@@ -14,7 +14,7 @@ public class Chronowarpers2 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//Debug.Log ("Running");
-	}
-
+	}*/
+	
 	//Use LateUpdate for calls after UnitBrain
 }
