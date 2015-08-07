@@ -110,7 +110,7 @@ public class UnitBrain : MonoBehaviour {
 
 
 	void FixedUpdate () {
-		hspeed = speed ;
+		//hspeed = speed ;
 		GetComponent<Rigidbody2D>().MovePosition(new Vector2 
 		 	(GetComponent<Rigidbody2D>().position.x + (hspeed* Time.fixedDeltaTime * Mathf.Cos(transform.rotation.eulerAngles.z * Mathf.Deg2Rad)), 
 		 	 GetComponent<Rigidbody2D>().position.y + (hspeed* Time.fixedDeltaTime * Mathf.Sin(transform.rotation.eulerAngles.z * Mathf.Deg2Rad)))) ;

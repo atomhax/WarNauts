@@ -100,7 +100,8 @@ public class globalVariables : MonoBehaviour {
 		raceArray [0].GetComponent<Race>().unitMaxHealth [4] = 160f;		
 		raceArray [0].GetComponent<Race>().unitArmor [4] = 3f;	
 		raceArray [0].GetComponent<Race>().unitSprite [4] = Resources.Load<Sprite> ("unit5");	
-		raceArray [0].GetComponent<Race>().unitCooldown [4] = 3.7f; raceArray [0].GetComponent<Race>().unitRange [4] = 0.9f;
+		raceArray [0].GetComponent<Race>().unitCooldown [4] = 3.7f; 
+		raceArray [0].GetComponent<Race>().unitRange [4] = 0.9f;
 		
 		raceArray[0].GetComponent<Race>().unitName[5] = "NanoSecond" ;	
 		raceArray [0].GetComponent<Race>().unitSpeed [5] = 0.9f;	
@@ -109,7 +110,8 @@ public class globalVariables : MonoBehaviour {
 		raceArray [0].GetComponent<Race>().unitMaxHealth [5] = 80f;			
 		raceArray [0].GetComponent<Race>().unitArmor [5] = 0f;	
 		raceArray [0].GetComponent<Race>().unitSprite [5] = Resources.Load<Sprite> ("unit6");	
-		raceArray [0].GetComponent<Race>().unitCooldown [5] = 2.8f; raceArray [0].GetComponent<Race>().unitRange [5] = 0.4f;
+		raceArray [0].GetComponent<Race>().unitCooldown [5] = 2.8f; 
+		raceArray [0].GetComponent<Race>().unitRange [5] = 0.4f;
 		
 		raceArray[0].GetComponent<Race>().unitName[6] = "Lifetime" ;	 
 		raceArray [0].GetComponent<Race>().unitSpeed [6] = 0.6f;	
