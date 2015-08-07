@@ -28,6 +28,8 @@ public class Nedrex7 : MonoBehaviour {
 			if ((unitBrain.enteredRange.GetComponent<colliderBrain> ().type == 0) && (currentUnit == null)) {
 				if (unitBrain.enteredRange.GetComponent<UnitBrain> ().team == unitBrain.team) {
 					currentUnit = unitBrain.enteredRange;
+					unitBrain.speed = unitBrain.speed/2 ;
+
 				}
 			}
 			unitBrain.enteredRange = null;

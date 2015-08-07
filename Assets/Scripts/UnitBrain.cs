@@ -35,6 +35,7 @@ public class UnitBrain : MonoBehaviour {
 	public short moveDirection ;
 	public float currentHealth;
 	void Awake() {
+		moveDirection = 1;
 		copy = false ;
 	}
 
@@ -42,11 +43,12 @@ public class UnitBrain : MonoBehaviour {
 		if (copy == false) {
 			switch (axis) {
 			case 0 :
-				//moveDirection = -1 ;
+				moveDirection = -1 ;
 				//transform.localScale = new Vector3((-1f)*transform.localScale.x,transform.localScale.y,transform.localScale.z) ;
 				transform.Rotate(new Vector3(0,0,180)) ;
 				break;
 			case 1 : 
+				moveDirection = -1 ;
 				transform.Rotate(new Vector3(0,0,-90)) ;
 				break;
 			case 2 :
@@ -69,8 +71,6 @@ public class UnitBrain : MonoBehaviour {
 
 
 		currentHealth = maxHealth ;
-
-		moveDirection = 1;
 		//raceGimmick (gameObject, 0);
 		//createAbility (gameObject);
 	}
@@ -110,9 +110,10 @@ public class UnitBrain : MonoBehaviour {
 
 
 	void FixedUpdate () {
+		hspeed = speed ;
 		GetComponent<Rigidbody2D>().MovePosition(new Vector2 
-		 	(GetComponent<Rigidbody2D>().position.x + (hspeed* Time.fixedDeltaTime * moveDirection * Mathf.Cos(transform.rotation.eulerAngles.z * Mathf.Deg2Rad)), 
-		 	 GetComponent<Rigidbody2D>().position.y + (hspeed* Time.fixedDeltaTime * moveDirection * Mathf.Sin(transform.rotation.eulerAngles.z * Mathf.Deg2Rad)))) ;
+		 	(GetComponent<Rigidbody2D>().position.x + (hspeed* Time.fixedDeltaTime * Mathf.Cos(transform.rotation.eulerAngles.z * Mathf.Deg2Rad)), 
+		 	 GetComponent<Rigidbody2D>().position.y + (hspeed* Time.fixedDeltaTime * Mathf.Sin(transform.rotation.eulerAngles.z * Mathf.Deg2Rad)))) ;
 		
 	}
 }

@@ -15,7 +15,6 @@ public class Nedrex3 : MonoBehaviour {
 	void Update () {
 	if (unitBrain.atkCooldown <= 3&&unitBrain.enemy!=null) {
 		if (unitBrain.enemy.GetComponent<UnitBrain> ().currentHealth-unitBrain.damage <= 0) {
-				Debug.Log("I killed a man with this thumb") ;
 				newUnit = Instantiate(gameObject) ;
 				newUnit.GetComponent<UnitBrain>().speed = (Random.value+0.5f)*newUnit.GetComponent<UnitBrain>().speed ;
 				newUnit.GetComponent<UnitBrain>().copy = true ;
