@@ -50,7 +50,7 @@ public class globalVariables : MonoBehaviour {
 		
 		
 		raceArray [0].GetComponent<Race>().raceName = "Chronowarpers";
-		raceArray [0].transform.name = "Chronowarpers";
+		raceArray [0].transform.name = raceArray [0].GetComponent<Race>().raceName;
 		
 		
 		raceArray[0].GetComponent<Race>().unitName[0] = "Moment" ;
@@ -59,7 +59,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray [0].GetComponent<Race>().unitAtkDamage [0] = 20f;		
 		raceArray [0].GetComponent<Race>().unitMaxHealth [0] = 140f;		
 		raceArray [0].GetComponent<Race>().unitArmor [0] = 0f;	
-		raceArray [0].GetComponent<Race>().unitSprite [0] = Resources.Load<Sprite> ("unit1");	
+		raceArray [0].GetComponent<Race>().unitSprite [0] = Resources.Load<Sprite> (raceArray [0].transform.name + "/0");	
 		raceArray [0].GetComponent<Race>().unitCooldown [0] = 2.2f;	
 		raceArray [0].GetComponent<Race>().unitRange [0] = 0.87f;	
 		
@@ -69,7 +69,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray [0].GetComponent<Race>().unitAtkDamage [1] = 10f;		
 		raceArray [0].GetComponent<Race>().unitMaxHealth [1] = 150f;		
 		raceArray [0].GetComponent<Race>().unitArmor [1] = 0f;	
-		raceArray [0].GetComponent<Race>().unitSprite [1] = Resources.Load<Sprite> ("unit2");	
+		raceArray [0].GetComponent<Race>().unitSprite [1] = Resources.Load<Sprite> (raceArray [0].transform.name + "/1");	
 		raceArray [0].GetComponent<Race>().unitCooldown [1] = 3.0f; 
 		raceArray [0].GetComponent<Race>().unitRange [1] = 1.0f;	
 		
@@ -79,7 +79,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray [0].GetComponent<Race>().unitAtkDamage [2] = 5.5f;	
 		raceArray [0].GetComponent<Race>().unitMaxHealth [2] = 350f;		
 		raceArray [0].GetComponent<Race>().unitArmor [2] = 3f;	
-		raceArray [0].GetComponent<Race>().unitSprite [2] = Resources.Load<Sprite> ("unit3");	
+		raceArray [0].GetComponent<Race>().unitSprite [2] = Resources.Load<Sprite> (raceArray [0].transform.name + "/2");	
 		raceArray [0].GetComponent<Race>().unitCooldown [2] = 4.0f; 
 		raceArray [0].GetComponent<Race>().unitRange [2] = 0.5f;	
 		
@@ -89,7 +89,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray [0].GetComponent<Race>().unitAtkDamage [3] = 100f;	
 		raceArray [0].GetComponent<Race>().unitMaxHealth [3] = 100f;		
 		raceArray [0].GetComponent<Race>().unitArmor [3] = 2f;	
-		raceArray [0].GetComponent<Race>().unitSprite [3] = Resources.Load<Sprite> ("unit4");	
+		raceArray [0].GetComponent<Race>().unitSprite [3] = Resources.Load<Sprite> (raceArray [0].transform.name + "/3");	
 		raceArray [0].GetComponent<Race>().unitCooldown [3] = 5.0f; 
 		raceArray [0].GetComponent<Race>().unitRange [3] = 3.6f;	
 		
@@ -99,7 +99,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray [0].GetComponent<Race>().unitAtkDamage [4] = 20f;		
 		raceArray [0].GetComponent<Race>().unitMaxHealth [4] = 160f;		
 		raceArray [0].GetComponent<Race>().unitArmor [4] = 3f;	
-		raceArray [0].GetComponent<Race>().unitSprite [4] = Resources.Load<Sprite> ("unit5");	
+		raceArray [0].GetComponent<Race>().unitSprite [4] = Resources.Load<Sprite> (raceArray [0].transform.name + "/4");	
 		raceArray [0].GetComponent<Race>().unitCooldown [4] = 3.7f; 
 		raceArray [0].GetComponent<Race>().unitRange [4] = 0.9f;
 		
@@ -109,7 +109,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray [0].GetComponent<Race>().unitAtkDamage [5] = 10f;		
 		raceArray [0].GetComponent<Race>().unitMaxHealth [5] = 80f;			
 		raceArray [0].GetComponent<Race>().unitArmor [5] = 0f;	
-		raceArray [0].GetComponent<Race>().unitSprite [5] = Resources.Load<Sprite> ("unit6");	
+		raceArray [0].GetComponent<Race>().unitSprite [5] = Resources.Load<Sprite> (raceArray [0].transform.name + "/5");	
 		raceArray [0].GetComponent<Race>().unitCooldown [5] = 2.8f; 
 		raceArray [0].GetComponent<Race>().unitRange [5] = 0.4f;
 		
@@ -119,7 +119,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray [0].GetComponent<Race>().unitAtkDamage [6] = 20f;		
 		raceArray [0].GetComponent<Race>().unitMaxHealth [6] = 220f;		
 		raceArray [0].GetComponent<Race>().unitArmor [6] = 0f;	
-		raceArray [0].GetComponent<Race>().unitSprite [6] = Resources.Load<Sprite> ("unit7");	
+		raceArray [0].GetComponent<Race>().unitSprite [6] = Resources.Load<Sprite> (raceArray [0].transform.name + "/6");	
 		raceArray [0].GetComponent<Race>().unitCooldown [6] = 3.7f; 
 		raceArray [0].GetComponent<Race>().unitRange [6] = 1.1f;
 		
@@ -129,7 +129,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray [0].GetComponent<Race>().unitAtkDamage [7] = 20f;		
 		raceArray [0].GetComponent<Race>().unitMaxHealth [7] = 420f;		
 		raceArray [0].GetComponent<Race>().unitArmor [7] = 4f;	
-		raceArray [0].GetComponent<Race>().unitSprite [7] = Resources.Load<Sprite> ("unit8");	
+		raceArray [0].GetComponent<Race>().unitSprite [7] = Resources.Load<Sprite> (raceArray [0].transform.name + "/7");	
 		raceArray [0].GetComponent<Race>().unitCooldown [7] = 6.5f; 
 		raceArray [0].GetComponent<Race>().unitRange [7] = 0.8f;
 		
@@ -139,7 +139,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray [0].GetComponent<Race>().unitAtkDamage [8] = 5f;		
 		raceArray [0].GetComponent<Race>().unitMaxHealth [8] = 700f;	
 		raceArray [0].GetComponent<Race>().unitArmor [8] = 6f;	
-		raceArray [0].GetComponent<Race>().unitSprite [8] = Resources.Load<Sprite> ("unit9");
+		raceArray [0].GetComponent<Race>().unitSprite [8] = Resources.Load<Sprite> (raceArray [0].transform.name + "/8");
 		raceArray [0].GetComponent<Race>().unitCooldown [8] = 10f;
 		raceArray [0].GetComponent<Race>().unitRange [8] = 0.6f;
 
@@ -167,7 +167,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray [1].GetComponent<Race>().unitAtkDamage [0] = 2.5f;		
 		raceArray [1].GetComponent<Race>().unitMaxHealth [0] = 150f;		
 		raceArray [1].GetComponent<Race>().unitArmor [0] = 0f;	
-		raceArray [1].GetComponent<Race>().unitSprite [0] = Resources.Load<Sprite> ("unit10");
+		raceArray [1].GetComponent<Race>().unitSprite [0] = Resources.Load<Sprite> (raceArray [1].transform.name + "/0");
 		raceArray [1].GetComponent<Race>().unitCooldown [0] = 2.6f;
 		raceArray [1].GetComponent<Race>().unitRange [0] = 0.15f;	
 		
@@ -177,7 +177,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray [1].GetComponent<Race>().unitAtkDamage [1] = 3.2f;		
 		raceArray [1].GetComponent<Race>().unitMaxHealth [1] = 120f;	
 		raceArray [1].GetComponent<Race>().unitArmor [1] = 0f;	
-		raceArray [1].GetComponent<Race>().unitSprite [1] = Resources.Load<Sprite> ("unit11");
+		raceArray [1].GetComponent<Race>().unitSprite [1] = Resources.Load<Sprite> (raceArray [1].transform.name + "/1");
 		raceArray [1].GetComponent<Race>().unitCooldown [1] = 3.0f;	
 		raceArray [1].GetComponent<Race>().unitRange [1] = 0.15f;	
 		
@@ -187,7 +187,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray [1].GetComponent<Race>().unitAtkDamage [2] = 0f;			
 		raceArray [1].GetComponent<Race>().unitMaxHealth [2] = 40f;			
 		raceArray [1].GetComponent<Race>().unitArmor [2] = 2f;	
-		raceArray [1].GetComponent<Race>().unitSprite [2] = Resources.Load<Sprite> ("unit12");	
+		raceArray [1].GetComponent<Race>().unitSprite [2] = Resources.Load<Sprite> (raceArray [1].transform.name + "/2");	
 		raceArray [1].GetComponent<Race>().unitCooldown [2] = 2.2f;	
 		raceArray [1].GetComponent<Race>().unitRange [2] = 0.05f;	
 		
@@ -197,7 +197,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray [1].GetComponent<Race>().unitAtkDamage [3] = 12f;	
 		raceArray [1].GetComponent<Race>().unitMaxHealth [3] = 130f;	
 		raceArray [1].GetComponent<Race>().unitArmor [3] = 0f;
-		raceArray [1].GetComponent<Race>().unitSprite [3] = Resources.Load<Sprite> ("unit13");	
+		raceArray [1].GetComponent<Race>().unitSprite [3] = Resources.Load<Sprite> (raceArray [1].transform.name + "/3");	
 		raceArray [1].GetComponent<Race>().unitCooldown [3] = 3.0f;	
 		raceArray [1].GetComponent<Race>().unitRange [3] = 0.4f;
 		
@@ -207,7 +207,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray [1].GetComponent<Race>().unitAtkDamage [4] = 140f;	
 		raceArray [1].GetComponent<Race>().unitMaxHealth [4] = 200f;		
 		raceArray [1].GetComponent<Race>().unitArmor [4] = 0f;	
-		raceArray [1].GetComponent<Race>().unitSprite [4] = Resources.Load<Sprite> ("unit14");
+		raceArray [1].GetComponent<Race>().unitSprite [4] = Resources.Load<Sprite> (raceArray [1].transform.name + "/4");
 		raceArray [1].GetComponent<Race>().unitCooldown [4] = 4.0f;
 		raceArray [1].GetComponent<Race>().unitRange [4] = 0.25f;		
 		
@@ -217,7 +217,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray [1].GetComponent<Race>().unitAtkDamage [5] = 100f;	
 		raceArray [1].GetComponent<Race>().unitMaxHealth [5] = 160f;		
 		raceArray [1].GetComponent<Race>().unitArmor [5] = 0f;	
-		raceArray [1].GetComponent<Race>().unitSprite [5] = Resources.Load<Sprite> ("unit15");
+		raceArray [1].GetComponent<Race>().unitSprite [5] = Resources.Load<Sprite> (raceArray [1].transform.name + "/5");
 		raceArray [1].GetComponent<Race>().unitCooldown [5] = 4.2f;
 		raceArray [1].GetComponent<Race>().unitRange [5] = 0.48f;
 		
@@ -227,7 +227,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray [1].GetComponent<Race>().unitAtkDamage [6] = 0;	
 		raceArray [1].GetComponent<Race>().unitMaxHealth [6] = 100f;		
 		raceArray [1].GetComponent<Race>().unitArmor [6] = 1f;	
-		raceArray [1].GetComponent<Race>().unitSprite [6] = Resources.Load<Sprite> ("unit16");
+		raceArray [1].GetComponent<Race>().unitSprite [6] = Resources.Load<Sprite> (raceArray [1].transform.name + "/6");
 		raceArray [1].GetComponent<Race>().unitCooldown [6] = 0.5f;
 		raceArray [1].GetComponent<Race>().unitRange [6] = 0.1f;
 		
@@ -237,7 +237,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray [1].GetComponent<Race>().unitAtkDamage [7] = 22;	
 		raceArray [1].GetComponent<Race>().unitMaxHealth [7] = 70f;		
 		raceArray [1].GetComponent<Race>().unitArmor [7] = 0f;	
-		raceArray [1].GetComponent<Race>().unitSprite [7] = Resources.Load<Sprite> ("unit17");
+		raceArray [1].GetComponent<Race>().unitSprite [7] = Resources.Load<Sprite> (raceArray [1].transform.name + "/7");
 		raceArray [1].GetComponent<Race>().unitCooldown [7] = 4.0f;
 		raceArray [1].GetComponent<Race>().unitRange [7] = 0.2f;
 		
@@ -247,7 +247,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray [1].GetComponent<Race>().unitAtkDamage [8] = 0f;			
 		raceArray [1].GetComponent<Race>().unitMaxHealth [8] = 40f;			
 		raceArray [1].GetComponent<Race>().unitArmor [8] = 2f;	
-		raceArray [1].GetComponent<Race>().unitSprite [8] = Resources.Load<Sprite> ("unit12");	
+		raceArray [1].GetComponent<Race>().unitSprite [8] = Resources.Load<Sprite> (raceArray [1].transform.name + "/2");	
 		raceArray [1].GetComponent<Race>().unitCooldown [8] = 6.5f;	
 		raceArray [1].GetComponent<Race>().unitRange [8] = 0.05f;	
 
@@ -257,7 +257,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray [1].GetComponent<Race>().unitAtkDamage [9] = 120f;			
 		raceArray [1].GetComponent<Race>().unitMaxHealth [9] = 300f;			
 		raceArray [1].GetComponent<Race>().unitArmor [9] = 3f;	
-		raceArray [1].GetComponent<Race>().unitSprite [9] = Resources.Load<Sprite> ("unit18");	
+		raceArray [1].GetComponent<Race>().unitSprite [9] = Resources.Load<Sprite> (raceArray [1].transform.name + "/8");	
 		raceArray [1].GetComponent<Race>().unitCooldown [9] = 6f;	
 		raceArray [1].GetComponent<Race>().unitRange [9] = 0.4f;	
 	}
