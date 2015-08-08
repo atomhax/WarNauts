@@ -13,7 +13,7 @@ public class Nedrex3 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	if (unitBrain.atkCooldown <= 3&&unitBrain.enemy!=null) {
+		if (unitBrain.atkCooldown <= 1000 * Time.deltaTime && unitBrain.enemy!=null) {
 		if (unitBrain.enemy.GetComponent<UnitBrain> ().currentHealth-unitBrain.damage <= 0) {
 				newUnit = Instantiate(gameObject) ;
 				newUnit.GetComponent<UnitBrain>().speed = (Random.value+0.5f)*newUnit.GetComponent<UnitBrain>().speed ;
