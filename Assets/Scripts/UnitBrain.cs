@@ -11,6 +11,7 @@ public class UnitBrain : MonoBehaviour {
 	public float range ;
 	public float maxHealth ;
 	public float armor ;
+	public float playerDamage ;
 	public Slider healthBar ;
 	public bool copy ;
 	public string team ;

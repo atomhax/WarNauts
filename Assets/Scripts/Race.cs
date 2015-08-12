@@ -16,6 +16,7 @@ public class Race : MonoBehaviour {
 	public float[] unitRange ;
 	public Sprite[] unitSprite ;
 	public float[] unitCooldown ;
+	public float[] unitPlayerDamage ;
 	//public AbilityDelegate[] createAbility ;
 	//public AbilityDelegate[] passiveAbility ;
 	//public AbilityDelegate[] deathAbility ;

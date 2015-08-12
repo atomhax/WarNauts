@@ -50,6 +50,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray[raceNum].GetComponent<Race>().unitArmor = new float[unitAmount] ;
 		raceArray[raceNum].GetComponent<Race>().unitCooldown = new float[unitAmount] ;
 		raceArray[raceNum].GetComponent<Race>().unitSprite = new Sprite[unitAmount] ;
+		raceArray[raceNum].GetComponent<Race>().unitPlayerDamage = new float[unitAmount] ;
 		
 		
 		
@@ -65,6 +66,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray[raceNum].GetComponent<Race>().unitSprite [unitNum] = Resources.Load<Sprite> (raceArray[raceNum].transform.name + "/0");	
 		raceArray[raceNum].GetComponent<Race>().unitCooldown [unitNum] = 2.2f;	
 		raceArray[raceNum].GetComponent<Race>().unitRange [unitNum] = 0.87f;
+		raceArray[raceNum].GetComponent<Race>().unitPlayerDamage [unitNum] = 10f;
 		unitNum++;
 		
 		raceArray[raceNum].GetComponent<Race>().unitName[unitNum] = "Jiffy" ;		 
@@ -76,6 +78,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray[raceNum].GetComponent<Race>().unitSprite [unitNum] = Resources.Load<Sprite> (raceArray[raceNum].transform.name + "/1");	
 		raceArray[raceNum].GetComponent<Race>().unitCooldown [unitNum] = 3.0f; 
 		raceArray[raceNum].GetComponent<Race>().unitRange [unitNum] = 1.0f;	
+		raceArray[raceNum].GetComponent<Race>().unitPlayerDamage [unitNum] = 10f;
 		unitNum++;
 		
 		raceArray[raceNum].GetComponent<Race>().unitName[unitNum] = "Century" ;		 
@@ -87,6 +90,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray[raceNum].GetComponent<Race>().unitSprite [unitNum] = Resources.Load<Sprite> (raceArray[raceNum].transform.name + "/2");	
 		raceArray[raceNum].GetComponent<Race>().unitCooldown [unitNum] = 4.0f; 
 		raceArray[raceNum].GetComponent<Race>().unitRange [unitNum] = 0.5f;	
+		raceArray[raceNum].GetComponent<Race>().unitPlayerDamage [unitNum] = 10f;
 		unitNum++;
 		
 		raceArray[raceNum].GetComponent<Race>().unitName[unitNum] = "Eon" ;		 	
@@ -98,6 +102,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray[raceNum].GetComponent<Race>().unitSprite [unitNum] = Resources.Load<Sprite> (raceArray[raceNum].transform.name + "/3");	
 		raceArray[raceNum].GetComponent<Race>().unitCooldown [unitNum] = 5.0f; 
 		raceArray[raceNum].GetComponent<Race>().unitRange [unitNum] = 3.6f;	
+		raceArray[raceNum].GetComponent<Race>().unitPlayerDamage [unitNum] = 10f;
 		unitNum++;
 		
 		raceArray[raceNum].GetComponent<Race>().unitName[unitNum] = "Leap Year" ;	 
@@ -109,6 +114,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray[raceNum].GetComponent<Race>().unitSprite [unitNum] = Resources.Load<Sprite> (raceArray[raceNum].transform.name + "/4");	
 		raceArray[raceNum].GetComponent<Race>().unitCooldown [unitNum] = 3.7f; 
 		raceArray[raceNum].GetComponent<Race>().unitRange [unitNum] = 0.9f;
+		raceArray[raceNum].GetComponent<Race>().unitPlayerDamage [unitNum] = 10f;
 		unitNum++;
 		
 		raceArray[raceNum].GetComponent<Race>().unitName[unitNum] = "NanoSecond" ;	
@@ -120,6 +126,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray[raceNum].GetComponent<Race>().unitSprite [unitNum] = Resources.Load<Sprite> (raceArray[raceNum].transform.name + "/5");	
 		raceArray[raceNum].GetComponent<Race>().unitCooldown [unitNum] = 2.8f; 
 		raceArray[raceNum].GetComponent<Race>().unitRange [unitNum] = 0.4f;
+		raceArray[raceNum].GetComponent<Race>().unitPlayerDamage [unitNum] = 10f;
 		unitNum++;
 		
 		raceArray[raceNum].GetComponent<Race>().unitName[unitNum] = "Lifetime" ;	 
@@ -131,6 +138,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray[raceNum].GetComponent<Race>().unitSprite [unitNum] = Resources.Load<Sprite> (raceArray[raceNum].transform.name + "/6");	
 		raceArray[raceNum].GetComponent<Race>().unitCooldown [unitNum] = 3.7f; 
 		raceArray[raceNum].GetComponent<Race>().unitRange [unitNum] = 1.1f;
+		raceArray[raceNum].GetComponent<Race>().unitPlayerDamage [unitNum] = 10f;
 		unitNum++;
 		
 		raceArray[raceNum].GetComponent<Race>().unitName[unitNum] = "Meridian" ;	 
@@ -142,6 +150,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray[raceNum].GetComponent<Race>().unitSprite [unitNum] = Resources.Load<Sprite> (raceArray[raceNum].transform.name + "/7");	
 		raceArray[raceNum].GetComponent<Race>().unitCooldown [unitNum] = 6.5f; 
 		raceArray[raceNum].GetComponent<Race>().unitRange [unitNum] = 0.8f;
+		raceArray[raceNum].GetComponent<Race>().unitPlayerDamage [unitNum] = 10f;
 		unitNum++;
 		
 		raceArray[raceNum].GetComponent<Race>().unitName[unitNum] = "Millenium" ;	 
@@ -153,6 +162,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray[raceNum].GetComponent<Race>().unitSprite [unitNum] = Resources.Load<Sprite> (raceArray[raceNum].transform.name + "/8");
 		raceArray[raceNum].GetComponent<Race>().unitCooldown [unitNum] = 10f;
 		raceArray[raceNum].GetComponent<Race>().unitRange [unitNum] = 0.6f;
+		raceArray[raceNum].GetComponent<Race>().unitPlayerDamage [unitNum] = 10f;
 
 
 		//Nedrex start
@@ -170,6 +180,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray[raceNum].GetComponent<Race>().unitArmor = new float[unitAmount] ;
 		raceArray[raceNum].GetComponent<Race>().unitCooldown = new float[unitAmount] ;
 		raceArray[raceNum].GetComponent<Race>().unitSprite = new Sprite[unitAmount] ;
+		raceArray[raceNum].GetComponent<Race>().unitPlayerDamage = new float[unitAmount] ;
 		
 		raceArray[raceNum].GetComponent<Race>().raceName = "Nedrex";
 		raceArray[raceNum].transform.name = "Nedrex";
@@ -182,7 +193,8 @@ public class globalVariables : MonoBehaviour {
 		raceArray[raceNum].GetComponent<Race>().unitArmor [unitNum] = 0f;	
 		raceArray[raceNum].GetComponent<Race>().unitSprite [unitNum] = Resources.Load<Sprite> (raceArray[raceNum].transform.name + "/0");
 		raceArray[raceNum].GetComponent<Race>().unitCooldown [unitNum] = 2.6f;
-		raceArray[raceNum].GetComponent<Race>().unitRange [unitNum] = 0.15f;	
+		raceArray[raceNum].GetComponent<Race>().unitRange [unitNum] = 0.15f;
+		raceArray[raceNum].GetComponent<Race>().unitPlayerDamage [unitNum] = 10f;	
 		unitNum++;
 		
 		raceArray[raceNum].GetComponent<Race>().unitName[unitNum] = "Buzzdodger" ;		
@@ -194,6 +206,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray[raceNum].GetComponent<Race>().unitSprite [unitNum] = Resources.Load<Sprite> (raceArray[raceNum].transform.name + "/1");
 		raceArray[raceNum].GetComponent<Race>().unitCooldown [unitNum] = 3.0f;	
 		raceArray[raceNum].GetComponent<Race>().unitRange [unitNum] = 0.15f;	
+		raceArray[raceNum].GetComponent<Race>().unitPlayerDamage [unitNum] = 10f;
 		unitNum++;
 		
 		raceArray[raceNum].GetComponent<Race>().unitName[unitNum] = "Boomstick" ;		
@@ -205,6 +218,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray[raceNum].GetComponent<Race>().unitSprite [unitNum] = Resources.Load<Sprite> (raceArray[raceNum].transform.name + "/2");	
 		raceArray[raceNum].GetComponent<Race>().unitCooldown [unitNum] = 2.2f;	
 		raceArray[raceNum].GetComponent<Race>().unitRange [unitNum] = 0.05f;	
+		raceArray[raceNum].GetComponent<Race>().unitPlayerDamage [unitNum] = 10f;
 		unitNum++;
 		
 		raceArray[raceNum].GetComponent<Race>().unitName[unitNum] = "Junker" ;		 	 
@@ -216,6 +230,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray[raceNum].GetComponent<Race>().unitSprite [unitNum] = Resources.Load<Sprite> (raceArray[raceNum].transform.name + "/3");	
 		raceArray[raceNum].GetComponent<Race>().unitCooldown [unitNum] = 3.0f;	
 		raceArray[raceNum].GetComponent<Race>().unitRange [unitNum] = 0.4f;
+		raceArray[raceNum].GetComponent<Race>().unitPlayerDamage [unitNum] = 10f;
 		unitNum++;
 		
 		raceArray[raceNum].GetComponent<Race>().unitName[unitNum] = "Buckshooter" ;		
@@ -226,7 +241,8 @@ public class globalVariables : MonoBehaviour {
 		raceArray[raceNum].GetComponent<Race>().unitArmor [unitNum] = 0f;	
 		raceArray[raceNum].GetComponent<Race>().unitSprite [unitNum] = Resources.Load<Sprite> (raceArray[raceNum].transform.name + "/4");
 		raceArray[raceNum].GetComponent<Race>().unitCooldown [unitNum] = 4.0f;
-		raceArray[raceNum].GetComponent<Race>().unitRange [unitNum] = 0.25f;		
+		raceArray[raceNum].GetComponent<Race>().unitRange [unitNum] = 0.25f;
+		raceArray[raceNum].GetComponent<Race>().unitPlayerDamage [unitNum] = 10f;		
 		unitNum++;
 		
 		raceArray[raceNum].GetComponent<Race>().unitName[unitNum] = "SandBagger" ;		
@@ -238,6 +254,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray[raceNum].GetComponent<Race>().unitSprite [unitNum] = Resources.Load<Sprite> (raceArray[raceNum].transform.name + "/5");
 		raceArray[raceNum].GetComponent<Race>().unitCooldown [unitNum] = 4.2f;
 		raceArray[raceNum].GetComponent<Race>().unitRange [unitNum] = 0.48f;
+		raceArray[raceNum].GetComponent<Race>().unitPlayerDamage [unitNum] = 10f;
 		unitNum++;
 		
 		raceArray[raceNum].GetComponent<Race>().unitName[unitNum] = "SandBags" ;		
@@ -249,6 +266,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray[raceNum].GetComponent<Race>().unitSprite [unitNum] = Resources.Load<Sprite> (raceArray[raceNum].transform.name + "/6");
 		raceArray[raceNum].GetComponent<Race>().unitCooldown [unitNum] = 0.5f;
 		raceArray[raceNum].GetComponent<Race>().unitRange [unitNum] = 0.1f;
+		raceArray[raceNum].GetComponent<Race>().unitPlayerDamage [unitNum] = 10f;
 		unitNum++;
 		
 		raceArray[raceNum].GetComponent<Race>().unitName[unitNum] = "Dozer" ;		
@@ -260,6 +278,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray[raceNum].GetComponent<Race>().unitSprite [unitNum] = Resources.Load<Sprite> (raceArray[raceNum].transform.name + "/7");
 		raceArray[raceNum].GetComponent<Race>().unitCooldown [unitNum] = 4.0f;
 		raceArray[raceNum].GetComponent<Race>().unitRange [unitNum] = 0.2f;
+		raceArray[raceNum].GetComponent<Race>().unitPlayerDamage [unitNum] = 10f;
 		unitNum++;
 		
 		raceArray[raceNum].GetComponent<Race>().unitName[unitNum] = "Triple Boomstick" ;		
@@ -271,6 +290,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray[raceNum].GetComponent<Race>().unitSprite [unitNum] = Resources.Load<Sprite> (raceArray[raceNum].transform.name + "/2");	
 		raceArray[raceNum].GetComponent<Race>().unitCooldown [unitNum] = 6.5f;	
 		raceArray[raceNum].GetComponent<Race>().unitRange [unitNum] = 0.05f;	
+		raceArray[raceNum].GetComponent<Race>().unitPlayerDamage [unitNum] = 10f;
 		unitNum++;
 
 		raceArray[raceNum].GetComponent<Race>().unitName[unitNum] = "Biggun" ;		
@@ -282,6 +302,7 @@ public class globalVariables : MonoBehaviour {
 		raceArray[raceNum].GetComponent<Race>().unitSprite [unitNum] = Resources.Load<Sprite> (raceArray[raceNum].transform.name + "/8");	
 		raceArray[raceNum].GetComponent<Race>().unitCooldown [unitNum] = 6f;	
 		raceArray[raceNum].GetComponent<Race>().unitRange [unitNum] = 0.4f;	
+		raceArray[raceNum].GetComponent<Race>().unitPlayerDamage [unitNum] = 10f;
 	}
 	//int fps = Mathf.RoundToInt(1.0f/Time.deltaTime) ;
 }
