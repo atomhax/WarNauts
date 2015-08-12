@@ -21,6 +21,7 @@ public class UnitBrain : MonoBehaviour {
 	public GameObject creator ;
 	public float hspeed ;
 	public Sprite mySprite ;
+	public selectorBrain[] selectors;
 	//public AbilityDelegate createAbility ;
 	//public AbilityDelegate passiveAbility ;
 	//public AbilityDelegate deathAbility ;
@@ -92,9 +93,18 @@ public class UnitBrain : MonoBehaviour {
 			hspeed = speed;
 		}
 		if (Mathf.Abs (transform.position.x) > 5.41) {
+			if (transform.position.x > 0) {
+				selectors[1].playerHealth -= playerDamage;
+			} else {
+				selectors[0].playerHealth -= playerDamage;
+			}
 			Destroy (gameObject);
-		}
-		if (Mathf.Abs (transform.position.y) > 5.41) {
+		} else if (Mathf.Abs (transform.position.y) > 5.41) {
+			if (transform.position.y > 0) {
+				selectors[2].playerHealth -= playerDamage;
+			} else {
+				selectors[3].playerHealth -= playerDamage;
+			}
 			Destroy (gameObject);
 		}
 		

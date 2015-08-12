@@ -7,6 +7,7 @@ public class selectorBrain : MonoBehaviour {
 	public GameObject race ;
 	public GameObject preview1 ;
 	public int playerAxis ;
+	public float playerHealth ;
 	GameObject preview ;
 	public GameObject bigPreview ;
 	public GameObject border ;
@@ -54,6 +55,8 @@ public class selectorBrain : MonoBehaviour {
 		Creator.selector = gameObject.GetComponent<selectorBrain>();
 		Creator.race = race;
 		//race = null;
+
+		playerHealth = 100f;
 	}
 	
 	// Update is called once per frame
@@ -74,5 +77,9 @@ public class selectorBrain : MonoBehaviour {
 		}
 
 		selectedBorder.transform.localPosition = new Vector3 ((currentlySelected*0.42f) - (Mathf.Floor(currentlySelected/10f)*4.2f)-1.89f,(-1*(Mathf.Floor(currentlySelected/10f))*0.42f)+2.48f,0f) ;
+	
+		if (playerHealth <= 0) {
+			Debug.Log (playerAxis + "is at 0 HP");
+		}
 	}
 }

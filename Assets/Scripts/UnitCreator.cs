@@ -14,6 +14,7 @@ public class UnitCreator : MonoBehaviour {
 	public GameObject race;
 	public string team ;
 	public GameObject arrow ;
+	selectorBrain[] selectors;
 
 
 	// Use this for initialization
@@ -22,6 +23,12 @@ public class UnitCreator : MonoBehaviour {
 		for (int i = 0; i < unitCooldowns.Length; i++) {
 			unitCooldowns[i] = race.GetComponent<Race>().unitCooldown[i];
 		}
+
+		selectors = new selectorBrain[4];
+		selectors [0] = GameObject.Find ("LeftSelector").GetComponent<selectorBrain> ();
+		selectors [1] = GameObject.Find ("RightSelector").GetComponent<selectorBrain> ();
+		selectors [2] = GameObject.Find ("UpSelector").GetComponent<selectorBrain> ();
+		selectors [3] = GameObject.Find ("DownSelector").GetComponent<selectorBrain> ();
 		
 	}
 	
@@ -38,6 +45,7 @@ public class UnitCreator : MonoBehaviour {
 				brain.atkDelay = race.GetComponent<Race> ().unitAtkDelay [selector.currentlySelected];
 				brain.damage = race.GetComponent<Race> ().unitAtkDamage [selector.currentlySelected];
 				brain.range = race.GetComponent<Race> ().unitRange [selector.currentlySelected];
+				brain.playerDamage = race.GetComponent<Race> ().unitPlayerDamage [selector.currentlySelected];
 				//brain.createAbility = race.GetComponent<Race> ().createAbility [selector.currentlySelected];
 				//brain.collisionAbility = race.GetComponent<Race> ().collisionAbility [selector.currentlySelected];
 				//brain.passiveAbility = race.GetComponent<Race> ().passiveAbility [selector.currentlySelected];
@@ -49,6 +57,7 @@ public class UnitCreator : MonoBehaviour {
 				brain.team = team;
 				brain.row = gameObject.GetComponent<ArrowMovement> ().currentRow;
 				brain.creator = gameObject;
+				brain.selectors = selectors;
 
 				newUnit.AddComponent(System.Type.GetType(race.GetComponent<Race> ().raceName + selector.currentlySelected));
 				newUnit.AddComponent(System.Type.GetType(race.GetComponent<Race> ().raceName + "Gimmick"));
